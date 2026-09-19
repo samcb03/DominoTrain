@@ -8,4 +8,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="src\Assets\Fonts\PressStart2P-Regular.ttf" />
+    <None Remove="src\Assets\Images\mesa_sillas.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="src\Assets\Fonts\PressStart2P-Regular.ttf" />
+    <Resource Include="src\Assets\Images\mesa_sillas.png" />
+  </ItemGroup>
+
 </Project>
