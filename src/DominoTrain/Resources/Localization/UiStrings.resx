@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+    </resheader>
+    <data name="SettingsWindowTitle" xml:space="preserve">
+        <value>Domino Train · Configuración</value>
+    </data>
+    <data name="MainWindowTitle" xml:space="preserve">
+        <value>Domino Train</value>
+    </data>
+    <data name="GameTitle" xml:space="preserve">
+        <value>DOMINO TRAIN</value>
+    </data>
+    <data name="SettingsTitle" xml:space="preserve">
+        <value>CONFIGURACIÓN</value>
+    </data>
+    <data name="AudioSectionLabel" xml:space="preserve">
+        <value>01 / AUDIO</value>
+    </data>
+    <data name="MusicVolumeLabel" xml:space="preserve">
+        <value>MÚSICA</value>
+    </data>
+    <data name="SoundEffectsVolumeLabel" xml:space="preserve">
+        <value>EFECTOS DE SONIDO</value>
+    </data>
+    <data name="MusicVolumeAccessibleName" xml:space="preserve">
+        <value>Volumen de música</value>
+    </data>
+    <data name="SoundEffectsVolumeAccessibleName" xml:space="preserve">
+        <value>Volumen de efectos de sonido</value>
+    </data>
+    <data name="LanguageSectionLabel" xml:space="preserve">
+        <value>02 / IDIOMA</value>
+    </data>
+    <data name="SpanishLanguageCode" xml:space="preserve">
+        <value>ES</value>
+    </data>
+    <data name="EnglishLanguageCode" xml:space="preserve">
+        <value>EN</value>
+    </data>
+    <data name="SpanishLanguageName" xml:space="preserve">
+        <value>Español</value>
+    </data>
+    <data name="EnglishLanguageName" xml:space="preserve">
+        <value>English</value>
+    </data>
+    <data name="SpanishLanguageDescription" xml:space="preserve">
+        <value>Spanish</value>
+    </data>
+    <data name="EnglishLanguageDescription" xml:space="preserve">
+        <value>Inglés</value>
+    </data>
+    <data name="SpanishLanguageAccessibleName" xml:space="preserve">
+        <value>Español</value>
+    </data>
+    <data name="EnglishLanguageAccessibleName" xml:space="preserve">
+        <value>Inglés / English</value>
+    </data>
+    <data name="BackButtonLabel" xml:space="preserve">
+        <value>VOLVER</value>
+    </data>
+    <data name="SaveButtonLabel" xml:space="preserve">
+        <value>GUARDAR</value>
+    </data>
+    <data name="BackButtonAccessibleName" xml:space="preserve">
+        <value>Volver al menú</value>
+    </data>
+    <data name="SaveButtonAccessibleName" xml:space="preserve">
+        <value>Guardar configuración</value>
+    </data>
+    <data name="OpenSettingsButtonLabel" xml:space="preserve">
+        <value>CONFIGURACIÓN</value>
+    </data>
+    <data name="OpenSettingsAccessibleName" xml:space="preserve">
+        <value>Abrir configuración</value>
+    </data>
+    <data name="VolumePercentageFormat" xml:space="preserve">
+        <value>{0:0}%</value>
+    </data>
+</root>
