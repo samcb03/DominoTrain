@@ -1,0 +1,218 @@
+﻿<Window x:Class="DominoTrain.src.Views.RegisterView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DominoTrain.src.Views"
+        xmlns:res="clr-namespace:DominoTrain.src.Resources"
+        mc:Ignorable="d"
+        Title="{x:Static res:Strings.WindowTitle}" Height="650" Width="980"
+        WindowStartupLocation="CenterScreen"
+        Background="#000000">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="BgDarkCard" Color="#E60D1A17"/>
+        <SolidColorBrush x:Key="SidebarDark" Color="#F2070E0C"/>
+        <SolidColorBrush x:Key="RetroBorder" Color="#335A50"/>
+        <SolidColorBrush x:Key="AccentMint" Color="#66D9B8"/>
+        <SolidColorBrush x:Key="TextLight" Color="#E5F6F0"/>
+        <SolidColorBrush x:Key="TextMuted" Color="#8AAFA4"/>
+        <SolidColorBrush x:Key="InputDark" Color="#0B1613"/>
+
+        <Style x:Key="PixelHeader" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Consolas, Lucida Console, Courier New"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="{StaticResource AccentMint}"/>
+        </Style>
+
+        <Style x:Key="RetroTextBox" TargetType="TextBox">
+            <Setter Property="Background" Value="{StaticResource InputDark}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextLight}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource RetroBorder}"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="CaretBrush" Value="{StaticResource AccentMint}"/>
+        </Style>
+
+        <Style x:Key="RetroPasswordBox" TargetType="PasswordBox">
+            <Setter Property="Background" Value="{StaticResource InputDark}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextLight}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource RetroBorder}"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="CaretBrush" Value="{StaticResource AccentMint}"/>
+        </Style>
+
+        <Style x:Key="RetroButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource InputDark}"/>
+            <Setter Property="Foreground" Value="{StaticResource AccentMint}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource RetroBorder}"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <Style x:Key="RetroButtonPrimary" TargetType="Button" BasedOn="{StaticResource RetroButton}">
+            <Setter Property="Background" Value="{StaticResource AccentMint}"/>
+            <Setter Property="Foreground" Value="#091411"/>
+            <Setter Property="BorderBrush" Value="{StaticResource AccentMint}"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Header -->
+            <Grid Grid.Row="0" Margin="10,0,10,10">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Width="28" Height="38" BorderBrush="{StaticResource AccentMint}"
+                            BorderThickness="2" Background="Transparent" Margin="0,0,10,0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Ellipse Width="4" Height="4" Fill="{StaticResource AccentMint}"/>
+                            <Rectangle Grid.Row="1" Fill="{StaticResource AccentMint}"/>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Ellipse Width="4" Height="4" Fill="{StaticResource AccentMint}" Margin="1"/>
+                                <Ellipse Width="4" Height="4" Fill="{StaticResource AccentMint}" Margin="1"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                    <StackPanel>
+                        <TextBlock Text="{x:Static res:Strings.AppName}" Style="{StaticResource PixelHeader}" FontSize="15"/>
+                        <TextBlock Text="{x:Static res:Strings.AppTagline}" FontSize="10"
+                                   Foreground="{StaticResource TextMuted}" FontFamily="Consolas"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <TextBlock Text="{x:Static res:Strings.BreadcrumbMenu}" FontFamily="Consolas" FontWeight="Bold"
+                               Foreground="{StaticResource TextMuted}" VerticalAlignment="Center"/>
+                    <Border BorderBrush="{StaticResource AccentMint}" BorderThickness="2"
+                            Background="{StaticResource SidebarDark}" Padding="10,4">
+                        <TextBlock Text="{x:Static res:Strings.BreadcrumbRegister}" FontFamily="Consolas"
+                                   FontWeight="Bold" Foreground="{StaticResource AccentMint}"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+
+            <!-- Card -->
+            <Grid Grid.Row="1" Width="760" Height="450" HorizontalAlignment="Left"
+                  VerticalAlignment="Center" Margin="138,0,0,0">
+                <Border Background="#000000" Margin="-4,-4,10,10"/>
+
+                <Image Source="pack://application:,,,/src/Assets/Images/mesa_sillas.png"
+                       Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Opacity="0.50" Width="370" Margin="295,33,0,0"/>
+
+                <Border Background="{StaticResource BgDarkCard}"
+                        BorderBrush="{StaticResource RetroBorder}" BorderThickness="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="210"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Sidebar -->
+                        <Border Grid.Column="0" Background="{StaticResource SidebarDark}"
+                                BorderBrush="{StaticResource RetroBorder}" BorderThickness="0,0,2,0" Padding="16">
+                            <Grid>
+                                <StackPanel>
+                                    <TextBlock Text="{x:Static res:Strings.SidebarLabel}" FontSize="11" FontWeight="Bold"
+                                               Foreground="{StaticResource AccentMint}" FontFamily="Consolas"/>
+                                    <TextBlock Text="{x:Static res:Strings.SidebarHeadline}" TextWrapping="Wrap"
+                                               FontSize="22" FontWeight="Black" Margin="0,12,0,0" LineHeight="24"
+                                               Foreground="{StaticResource TextLight}" FontFamily="Consolas"/>
+                                    <TextBlock Text="{x:Static res:Strings.SidebarDescription}" TextWrapping="Wrap"
+                                               Margin="0,12,0,0" FontSize="11"
+                                               Foreground="{StaticResource TextMuted}" FontFamily="Consolas"/>
+                                </StackPanel>
+
+                                <StackPanel VerticalAlignment="Bottom">
+                                    <Border BorderBrush="{StaticResource RetroBorder}" BorderThickness="2" Height="55"
+                                            Background="{StaticResource InputDark}" Margin="0,0,0,8">
+                                        <TextBlock Text="{x:Static res:Strings.SidebarTileSymbol}" FontSize="16"
+                                                   FontWeight="Bold" HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center" FontFamily="Consolas"
+                                                   Foreground="{StaticResource AccentMint}"/>
+                                    </Border>
+                                    <TextBlock Text="{x:Static res:Strings.SidebarFooterTitle}" FontSize="10"
+                                               FontWeight="Bold" FontFamily="Consolas"
+                                               Foreground="{StaticResource TextLight}"/>
+                                    <TextBlock Text="{x:Static res:Strings.SidebarFooterText}" FontSize="9"
+                                               Foreground="{StaticResource TextMuted}" FontFamily="Consolas"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <!-- Form -->
+                        <Grid Grid.Column="1" Margin="25,15,25,15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0">
+                                <TextBlock Text="{x:Static res:Strings.RegisterTitle}" FontSize="22" FontWeight="Black"
+                                           Style="{StaticResource PixelHeader}"/>
+                                <TextBlock Text="{x:Static res:Strings.RegisterSubtitle}" FontSize="11"
+                                           Foreground="{StaticResource TextMuted}" Margin="0,2,0,8" FontFamily="Consolas"/>
+                                <TextBlock Text="{x:Static res:Strings.CredentialsSection}" FontSize="10"
+                                           FontWeight="Bold" Foreground="{StaticResource AccentMint}" FontFamily="Consolas"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="1" Margin="0,6,0,0" VerticalAlignment="Center">
+                                <TextBlock Text="{x:Static res:Strings.EmailLabel}" FontSize="10" FontWeight="Bold"
+                                           FontFamily="Consolas" Foreground="{StaticResource TextMuted}" Margin="0,4,0,2"/>
+                                <TextBox x:Name="txtEmail" Style="{StaticResource RetroTextBox}"/>
+
+                                <TextBlock Text="{x:Static res:Strings.UsernameLabel}" FontSize="10" FontWeight="Bold"
+                                           FontFamily="Consolas" Foreground="{StaticResource TextMuted}" Margin="0,8,0,2"/>
+                                <TextBox x:Name="txtUser" Style="{StaticResource RetroTextBox}"/>
+
+                                <TextBlock Text="{x:Static res:Strings.PasswordLabel}" FontSize="10" FontWeight="Bold"
+                                           FontFamily="Consolas" Foreground="{StaticResource TextMuted}" Margin="0,8,0,2"/>
+                                <PasswordBox x:Name="passwordBox" Style="{StaticResource RetroPasswordBox}"/>
+                            </StackPanel>
+
+                            <Grid Grid.Row="2" Margin="0,10,0,0">
+                                <Button x:Name="buttonRegister" Content="{x:Static res:Strings.SignUpButton}"
+                                        Width="130" HorizontalAlignment="Right"
+                                        Style="{StaticResource RetroButtonPrimary}"
+                                        Click="RegisterButton_Click"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <!-- Footer -->
+            <Grid Grid.Row="2" Margin="10,10,10,0">
+                <TextBlock Text="{x:Static res:Strings.PageFooter}" FontSize="10" FontWeight="Bold"
+                           FontFamily="Consolas" Foreground="{StaticResource TextMuted}" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Rectangle Width="8" Height="8" Stroke="{StaticResource AccentMint}" StrokeThickness="1.5" Margin="2,0"/>
+                    <Rectangle Width="8" Height="8" Stroke="{StaticResource AccentMint}" StrokeThickness="1.5" Margin="2,0"/>
+                    <Rectangle Width="8" Height="8" Stroke="{StaticResource AccentMint}" StrokeThickness="1.5" Margin="2,0"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

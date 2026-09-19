@@ -239,4 +239,20 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="PixelTextDark" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PixelFont}" />
+        <Setter Property="Foreground" Value="{StaticResource AccentMint}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="Aliased" />
+    </Style>
+
+    <Style x:Key="PixelTextLight" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PixelFont}" />
+        <Setter Property="Foreground" Value="{StaticResource TextLight}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="Aliased" />
+    </Style>
 </ResourceDictionary>
