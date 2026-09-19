@@ -7,6 +7,17 @@ public partial class RegisterWindow : Window
     {
         InitializeComponent();
     }
+
+    private void OpenChangePassword(object sender, RoutedEventArgs e)
+    {
+        ChangePasswordWindow changePasswordWindow = new ChangePasswordWindow
+        {
+            Owner = this
+        };
+
+        changePasswordWindow.ShowDialog();
+    }
+
     private void OpenSettings(object sender, RoutedEventArgs e)
     {
         SettingsWindow settingsWindow = new SettingsWindow
