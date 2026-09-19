@@ -25,8 +25,7 @@
                 Content="{Binding [OpenSettingsButtonLabel]}"
                 Style="{StaticResource PixelButton}"
                 Height="54"
-                Click="OpenSettings"
-                AutomationProperties.Name="{Binding [OpenSettingsAccessibleName]}" />
+                Click="OpenSettings" />
         </StackPanel>
     </Grid>
 </Window>
