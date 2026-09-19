@@ -1,3 +1,3 @@
 <Solution>
-  <Project Path="DominoTrain.csproj" />
+    <Project Path="src/DominoTrain/DominoTrain.csproj" />
 </Solution>
