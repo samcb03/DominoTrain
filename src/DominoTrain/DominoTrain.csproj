@@ -8,6 +8,9 @@
         <UseWPF>true</UseWPF>
         <NeutralLanguage>es</NeutralLanguage>
     </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Resources\Images\PixelTrain.png" />
+    </ItemGroup>
 
     <ItemGroup>
       <Compile Remove="src\**" />
@@ -18,6 +21,7 @@
 
     <ItemGroup>
         <Resource Include="Assets/Fonts/PressStart2P-Regular.ttf" />
+        <Resource Include="Resources\Images\PixelTrain.png" />
         <None Update="Assets/Fonts/OFL.txt" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 

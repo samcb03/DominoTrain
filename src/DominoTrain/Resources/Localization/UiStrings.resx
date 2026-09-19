@@ -186,6 +186,9 @@
   <data name="OpenSettingsButtonLabel" xml:space="preserve">
     <value>CONFIGURACIÓN</value>
   </data>
+  <data name="VolumePercentageFormat" xml:space="preserve">
+    <value>{0:0}%</value>
+  </data>
   <data name="OpenSettingsAccessibleName" xml:space="preserve">
     <value>Abrir configuración</value>
   </data>

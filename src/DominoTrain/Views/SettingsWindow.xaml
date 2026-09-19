@@ -79,73 +79,9 @@
                                     Background="{StaticResource Aqua}"
                                     BorderBrush="{StaticResource Ink}"
                                     BorderThickness="0,0,4,0">
-                                    <Grid ClipToBounds="True">
-                                        <Canvas
-                                            Width="264"
-                                            Height="256"
-                                            VerticalAlignment="Bottom"
-                                            Margin="0,0,0,92"
-                                            IsHitTestVisible="False"
-                                            RenderOptions.EdgeMode="Aliased">
-                                            <Path
-                                                Fill="{StaticResource Mist}"
-                                                Data="M24,46 H36 V34 H60 V40 H72 V52 H84 V58 H24 Z M166,18 H178 V6
-                                                    H196 V12 H208 V24 H220 V30 H166 Z" />
-                                            <Path
-                                                Fill="{StaticResource Seafoam}"
-                                                Data="M0,150 H24 V132 H48 V114 H72 V126 H96 V150 H120 V138 H144
-                                                    V114 H168 V90 H192 V114 H216 V138 H240 V150 H264 V232 H0 Z" />
-                                            <Path
-                                                Fill="{StaticResource Mint}"
-                                                Data="M0,202 H24 V190 H48 V178 H72 V190 H96 V202 H132 V178 H156
-                                                    V166 H180 V178 H204 V190 H228 V178 H264 V232 H0 Z" />
-                                            <Path
-                                                Fill="{StaticResource Glacier}"
-                                                Data="M148,90 H166 V102 H148 Z M170,66 H194 V78 H170 Z M198,48 H216
-                                                    V60 H198 Z" />
-                                            <Canvas Canvas.Left="16" Canvas.Top="110" Width="116" Height="56">
-                                                <Canvas.RenderTransform>
-                                                    <ScaleTransform ScaleX="2" ScaleY="2" />
-                                                </Canvas.RenderTransform>
-                                                <Path
-                                                    Fill="{StaticResource Ink}"
-                                                    Data="M0,20 H34 V46 H0 Z M32,38 H42 V42 H32 Z" />
-                                                <Path Fill="{StaticResource Glacier}" Data="M3,23 H31 V41 H3 Z" />
-                                                <Path
-                                                    Fill="{StaticResource Ink}"
-                                                    Data="M15,23 H18 V41 H15 Z M6,26 H10 V30 H6 Z M23,34 H27 V38
-                                                        H23 Z M23,26 H27 V30 H23 Z M6,34 H10 V38 H6 Z" />
-                                                <Path
-                                                    Fill="{StaticResource Ink}"
-                                                    Data="M38,9 H70 V14 H67 V27 H79 V15 H76 V11 H91 V15 H88 V27 H98
-                                                        V31 H104 V37 H109 V43 H113 V47 H38 Z" />
-                                                <Path Fill="{StaticResource Frost}" Data="M43,14 H62 V31 H43 Z" />
-                                                <Path Fill="{StaticResource Ink}" Data="M47,17 H58 V27 H47 Z" />
-                                                <Path
-                                                    Fill="{StaticResource Aqua}"
-                                                    Data="M43,34 H99 V40 H105 V43 H43 Z" />
-                                                <Path
-                                                    Fill="{StaticResource Glacier}"
-                                                    Data="M72,30 H94 V33 H72 Z M44,35 H50 V38 H44 Z" />
-                                                <Path
-                                                    Fill="{StaticResource Ink}"
-                                                    Data="M5,44 H17 V53 H5 Z M22,44 H32 V53 H22 Z M46,43 H61 V56
-                                                        H46 Z M77,43 H92 V56 H77 Z" />
-                                                <Path
-                                                    Fill="{StaticResource Mint}"
-                                                    Data="M9,47 H13 V50 H9 Z M25,47 H29 V50 H25 Z M50,47 H57 V52
-                                                        H50 Z M81,47 H88 V52 H81 Z" />
-                                                <Path Fill="{StaticResource Glacier}" Data="M54,47 H85 V49 H54 Z" />
-                                            </Canvas>
-                                            <Path
-                                                Fill="{StaticResource Ink}"
-                                                Data="M0,228 H264 V232 H0 Z M0,242 H264 V246 H0 Z M12,228 H20 V252
-                                                    H12 Z M44,228 H52 V252 H44 Z M76,228 H84 V252 H76 Z M108,228
-                                                    H116 V252 H108 Z M140,228 H148 V252 H140 Z M172,228 H180 V252
-                                                    H172 Z M204,228 H212 V252 H204 Z M236,228 H244 V252 H236 Z" />
-                                        </Canvas>
-                                    </Grid>
+                                    <Image Source="/Resources/Images/PixelTrain.png" Margin="0,67,0,-67" />
                                 </Border>
+
                                 <Grid Grid.Column="1" Margin="36,28,36,24">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="74" />
@@ -281,7 +217,6 @@
                                                 Grid.Row="1"
                                                 Value="{x:Static resources:SettingsDefaults.DefaultSoundEffectsVolume}"
                                                 Style="{StaticResource PixelSlider}"
-                                                AutomationProperties.Name="{Binding [SoundEffectsVolumeAccessibleName]}"
                                                 Margin="0,3,0,18"
                                                 Grid.RowSpan="2"
                                                 x:FieldModifier="private" />
@@ -390,8 +325,7 @@
                                                 Width="188"
                                                 Height="50"
                                                 Background="{StaticResource Ink}"
-                                                Foreground="{StaticResource Glacier}"
-                                                AutomationProperties.Name="{Binding [SaveButtonAccessibleName]}" />
+                                                Foreground="{StaticResource Glacier}" />
                                         </Grid>
                                     </Grid>
                                 </Grid>
