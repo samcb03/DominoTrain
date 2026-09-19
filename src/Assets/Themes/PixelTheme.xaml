@@ -1,0 +1,152 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <FontFamily x:Key="PixelFont">/Assets/Fonts/#Press Start 2P</FontFamily>
+
+    <SolidColorBrush x:Key="PixelSky"     Color="#4F7398"/>
+    <SolidColorBrush x:Key="PixelSkyDark" Color="#3E5F84"/>
+    <SolidColorBrush x:Key="PixelPaper"   Color="#C9D6E3"/>
+    <SolidColorBrush x:Key="PixelPaperHi" Color="#EAF1F8"/>
+    <SolidColorBrush x:Key="PixelPaperLo" Color="#A9B9CB"/>
+    <SolidColorBrush x:Key="PixelInk"     Color="#22344B"/>
+    <SolidColorBrush x:Key="PixelShadow"  Color="#2F4A6B"/>
+    <SolidColorBrush x:Key="PixelAccent"  Color="#3F4656"/>
+    <SolidColorBrush x:Key="PixelLight"   Color="#F4F4F4"/>
+    <SolidColorBrush x:Key="PixelField"   Color="#F4F8FC"/>
+    <SolidColorBrush x:Key="PixelGreen"   Color="#2BB24C"/>
+
+    <DrawingBrush x:Key="DominoBackground" TileMode="Tile" Stretch="None"
+                  Viewport="0,0,96,48" ViewportUnits="Absolute"
+                  Viewbox="0,0,96,48" ViewboxUnits="Absolute">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <GeometryDrawing Brush="{StaticResource PixelSky}">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry Rect="0,0,96,48"/>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="{StaticResource PixelSkyDark}">
+                    <GeometryDrawing.Geometry>
+                        <GeometryGroup>
+                            <RectangleGeometry Rect="0,0,96,3"/>
+                            <RectangleGeometry Rect="0,0,3,48"/>
+                            <RectangleGeometry Rect="48,0,3,48"/>
+                            <RectangleGeometry Rect="22,21,6,6"/>
+                            <RectangleGeometry Rect="70,21,6,6"/>
+                        </GeometryGroup>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    
+    <Style x:Key="PixelWindow" TargetType="Window">
+        <Setter Property="Background" Value="{StaticResource DominoBackground}"/>
+        <Setter Property="Foreground" Value="{StaticResource PixelLight}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PixelFont}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display"/>
+        <Setter Property="TextOptions.TextRenderingMode" Value="Aliased"/>
+    </Style>
+
+    <Style TargetType="Image">
+        <Setter Property="RenderOptions.BitmapScalingMode" Value="NearestNeighbor"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="FontFamily" Value="{StaticResource PixelFont}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="{StaticResource PixelLight}"/>
+        <Setter Property="Background" Value="{StaticResource PixelAccent}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Border x:Name="shadow" Background="{StaticResource PixelShadow}" Margin="4,4,0,0"/>
+                        <Border x:Name="face" Background="{TemplateBinding Background}"
+                                BorderBrush="{StaticResource PixelInk}" BorderThickness="3"
+                                Margin="0,0,4,4" Padding="12,8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <Border x:Name="glow" Background="White" Opacity="0"
+                                IsHitTestVisible="False" Margin="0,0,4,4"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="glow" Property="Opacity" Value="0.2"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="face" Property="Margin" Value="4,4,0,0"/>
+                            <Setter TargetName="glow" Property="Margin" Value="4,4,0,0"/>
+                            <Setter TargetName="shadow" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{StaticResource PixelFont}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="{StaticResource PixelInk}"/>
+        <Setter Property="CaretBrush" Value="{StaticResource PixelInk}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="{StaticResource PixelField}"
+                            BorderBrush="{StaticResource PixelInk}" BorderThickness="3" Padding="6,4">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="PasswordBox">
+        <Setter Property="FontFamily" Value="{StaticResource PixelFont}"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="{StaticResource PixelInk}"/>
+        <Setter Property="CaretBrush" Value="{StaticResource PixelInk}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="PasswordBox">
+                    <Border Background="{StaticResource PixelField}"
+                            BorderBrush="{StaticResource PixelInk}" BorderThickness="3" Padding="6,4">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PixelPanel" TargetType="ContentControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Grid TextElement.Foreground="{StaticResource PixelInk}">
+                        <Grid Margin="0,4,0,0">
+                            <Border Margin="0,3" Background="{StaticResource PixelShadow}"/>
+                            <Border Margin="3,0" Background="{StaticResource PixelShadow}"/>
+                        </Grid>
+                        <Grid Margin="0,0,0,4">
+                            <Border Margin="0,3" Background="{StaticResource PixelInk}"/>
+                            <Border Margin="3,0" Background="{StaticResource PixelInk}"/>
+                            <Border Margin="3,6" Background="{StaticResource PixelPaper}"/>
+                            <Border Margin="6,3" Background="{StaticResource PixelPaper}"/>
+                            <Border Margin="6,3,6,0" Height="3" VerticalAlignment="Top"
+                                    Background="{StaticResource PixelPaperHi}"/>
+                            <Border Margin="6,0,6,3" Height="3" VerticalAlignment="Bottom"
+                                    Background="{StaticResource PixelPaperLo}"/>
+                            <ContentPresenter Margin="18"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

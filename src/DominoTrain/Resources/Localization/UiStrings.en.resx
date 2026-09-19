@@ -141,6 +141,9 @@
   <data name="MusicVolumeAccessibleName" xml:space="preserve">
     <value>Music volume</value>
   </data>
+  <data name="SoundEffectsVolumeAccessibleName" xml:space="preserve">
+    <value>Sound effects volume</value>
+  </data>
   <data name="LanguageSectionLabel" xml:space="preserve">
     <value>02 / LANGUAGE</value>
   </data>
@@ -185,5 +188,51 @@
   </data>
   <data name="VolumePercentageFormat" xml:space="preserve">
     <value>{0:0}%</value>
+  </data>
+</root>
+  <data name="OpenSettingsAccessibleName" xml:space="preserve">
+    <value>Open settings</value>
+  </data>
+  <data name="VolumePercentageFormat" xml:space="preserve">
+    <value>{0:0}%</value>
+  </data>
+  <data name="RegisterTittle" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="NewPassagerSubtitule" xml:space="preserve">
+    <value>■ NEW PASSENGER</value>
+  </data>
+  <data name="JoinTableTitle" xml:space="preserve">
+    <value>JOIN THE TABLE</value>
+  </data>
+  <data name="RegisterDescription" xml:space="preserve">
+    <value>Take a seat and register to start your game</value>
+  </data>
+  <data name="RegisterSectionTitle" xml:space="preserve">
+    <value>REGISTER</value>
+  </data>
+  <data name="CredentialSectionLabel" xml:space="preserve">
+    <value>01/ CREDENTIALS</value>
+  </data>
+  <data name="EmailAdressLabel" xml:space="preserve">
+    <value>EMAIL ADDRESS</value>
+  </data>
+  <data name="UsernameLabel" xml:space="preserve">
+    <value>USERNAME</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>PASSWORD</value>
+  </data>
+  <data name="SignUpBottonLabel" xml:space="preserve">
+    <value>SIGN UP</value>
+  </data>
+  <data name="SignUpButtonAccesibleName" xml:space="preserve">
+    <value>Sign up new account</value>
+  </data>
+  <data name="RegisterSucessMessage" xml:space="preserve">
+    <value>Register successfully</value>
+  </data>
+  <data name="ConfigurationButtonAccesibleName" xml:space="preserve">
+    <value>Configuration</value>
   </data>
 </root>

@@ -1,4 +1,4 @@
-using System.Globalization;
+﻿using System.Globalization;
 using System.Windows;
 using DominoTrain.Resources;
 using DominoTrain.Resources.Localization;
@@ -11,4 +11,5 @@ public partial class App : Application
     {
         UiStrings.Culture = CultureInfo.GetCultureInfo(SettingsDefaults.DefaultLanguageCode);
     }
+
 }

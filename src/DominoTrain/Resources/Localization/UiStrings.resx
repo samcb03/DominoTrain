@@ -141,6 +141,9 @@
   <data name="MusicVolumeAccessibleName" xml:space="preserve">
     <value>Volumen de música</value>
   </data>
+  <data name="SoundEffectsVolumeAccessibleName" xml:space="preserve">
+    <value>Volumen de efectos de sonido</value>
+  </data>
   <data name="LanguageSectionLabel" xml:space="preserve">
     <value>02 / IDIOMA</value>
   </data>
@@ -185,5 +188,50 @@
   </data>
   <data name="VolumePercentageFormat" xml:space="preserve">
     <value>{0:0}%</value>
+  </data>
+  <data name="OpenSettingsAccessibleName" xml:space="preserve">
+    <value>Abrir configuración</value>
+  </data>
+  <data name="VolumePercentageFormat" xml:space="preserve">
+    <value>{0:0}%</value>
+  </data>
+  <data name="RegisterTittle" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="NewPassagerSubtitule" xml:space="preserve">
+    <value>■ NUEVO PASAJERO</value>
+  </data>
+  <data name="JoinTableTitle" xml:space="preserve">
+    <value>ÚNETE A LA MESA</value>
+  </data>
+  <data name="RegisterDescription" xml:space="preserve">
+    <value>Toma asiento y regístrate para comenzar tu partida</value>
+  </data>
+  <data name="RegisterSectionTitle" xml:space="preserve">
+    <value>REGISTRO</value>
+  </data>
+  <data name="CredentialSectionLabel" xml:space="preserve">
+    <value>01/ CREDENCIALES</value>
+  </data>
+  <data name="EmailAdressLabel" xml:space="preserve">
+    <value>CORREO ELECTRÓNICO</value>
+  </data>
+  <data name="UsernameLabel" xml:space="preserve">
+    <value>NOMBRE DE USUARIO</value>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>CONTRASEÑA</value>
+  </data>
+  <data name="SignUpBottonLabel" xml:space="preserve">
+    <value>REGISTRARSE</value>
+  </data>
+  <data name="SignUpButtonAccesibleName" xml:space="preserve">
+    <value>Registrar nueva cuenta</value>
+  </data>
+  <data name="RegisterSucessMessage" xml:space="preserve">
+    <value>Registro completado correctamente</value>
+  </data>
+  <data name="ConfigurationButtonAccesibleName" xml:space="preserve">
+    <value>Configuración</value>
   </data>
 </root>
