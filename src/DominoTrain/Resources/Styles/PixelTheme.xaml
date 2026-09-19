@@ -242,7 +242,7 @@
 
     <Style x:Key="PixelTextDark" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="{StaticResource PixelFont}" />
-        <Setter Property="Foreground" Value="{StaticResource AccentMint}" />
+        <Setter Property="Foreground" Value="{StaticResource Seafoam}" />
         <Setter Property="FontSize" Value="12" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
         <Setter Property="TextOptions.TextRenderingMode" Value="Aliased" />
@@ -250,7 +250,7 @@
 
     <Style x:Key="PixelTextLight" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="{StaticResource PixelFont}" />
-        <Setter Property="Foreground" Value="{StaticResource TextLight}" />
+        <Setter Property="Foreground" Value="{StaticResource Glacier}" />
         <Setter Property="FontSize" Value="12" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
         <Setter Property="TextOptions.TextRenderingMode" Value="Aliased" />

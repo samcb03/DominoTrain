@@ -138,12 +138,6 @@
   <data name="SoundEffectsVolumeLabel" xml:space="preserve">
     <value>SOUND EFFECTS</value>
   </data>
-  <data name="MusicVolumeAccessibleName" xml:space="preserve">
-    <value>Music volume</value>
-  </data>
-  <data name="SoundEffectsVolumeAccessibleName" xml:space="preserve">
-    <value>Sound effects volume</value>
-  </data>
   <data name="LanguageSectionLabel" xml:space="preserve">
     <value>02 / LANGUAGE</value>
   </data>
@@ -177,21 +171,8 @@
   <data name="SaveButtonLabel" xml:space="preserve">
     <value>SAVE</value>
   </data>
-  <data name="BackButtonAccessibleName" xml:space="preserve">
-    <value>Back to menu</value>
-  </data>
-  <data name="SaveButtonAccessibleName" xml:space="preserve">
-    <value>Save settings</value>
-  </data>
   <data name="OpenSettingsButtonLabel" xml:space="preserve">
     <value>SETTINGS</value>
-  </data>
-  <data name="VolumePercentageFormat" xml:space="preserve">
-    <value>{0:0}%</value>
-  </data>
-</root>
-  <data name="OpenSettingsAccessibleName" xml:space="preserve">
-    <value>Open settings</value>
   </data>
   <data name="VolumePercentageFormat" xml:space="preserve">
     <value>{0:0}%</value>
@@ -232,7 +213,37 @@
   <data name="RegisterSucessMessage" xml:space="preserve">
     <value>Register successfully</value>
   </data>
-  <data name="ConfigurationButtonAccesibleName" xml:space="preserve">
-    <value>Configuration</value>
+  <data name="ChangePasswordWindowTitle" xml:space="preserve">
+    <value>Domino Train · Change password</value>
+  </data>
+  <data name="ChangePasswordTitle" xml:space="preserve">
+    <value>CHANGE PASSWORD</value>
+  </data>
+  <data name="AccountSecuritySectionLabel" xml:space="preserve">
+    <value>01 / SECURITY</value>
+  </data>
+  <data name="ProtectAccountDescription" xml:space="preserve">
+    <value>Your next journey starts with a secure account.</value>
+  </data>
+  <data name="CurrentPasswordLabel" xml:space="preserve">
+    <value>CURRENT PASSWORD</value>
+  </data>
+  <data name="NewPasswordLabel" xml:space="preserve">
+    <value>NEW PASSWORD</value>
+  </data>
+  <data name="ConfirmPasswordLabel" xml:space="preserve">
+    <value>CONFIRM NEW PASSWORD</value>
+  </data>
+  <data name="UpdatePasswordButtonLabel" xml:space="preserve">
+    <value>UPDATE PASSWORD</value>
+  </data>
+  <data name="PasswordPrivacyNote" xml:space="preserve">
+    <value>Do not share your password with other players.</value>
+  </data>
+  <data name="CurrentPasswordRequiredMessage" xml:space="preserve">
+    <value>Enter your current password.</value>
+  </data>
+  <data name="NewPasswordHint" xml:space="preserve">
+    <value>Choose a password different from your current one and confirm it.</value>
   </data>
 </root>

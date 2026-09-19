@@ -317,7 +317,9 @@
                                                 HorizontalAlignment="Left"
                                                 Width="154"
                                                 Height="50"
-                                                AutomationProperties.Name="{Binding [BackButtonAccessibleName]}" />
+                                                IsCancel="True"
+                                                AutomationProperties.Name="{Binding [ReturnToPreviousScreenAccessibleName]}"
+                                                Click="CloseSettings" />
                                             <Button
                                                 Content="{Binding [SaveButtonLabel]}"
                                                 Style="{StaticResource PixelButton}"
@@ -325,7 +327,9 @@
                                                 Width="188"
                                                 Height="50"
                                                 Background="{StaticResource Ink}"
-                                                Foreground="{StaticResource Glacier}" />
+                                                Foreground="{StaticResource Glacier}"
+                                                AutomationProperties.Name="{Binding [ApplySettingsAccessibleName]}"
+                                                Click="CloseSettings" />
                                         </Grid>
                                     </Grid>
                                 </Grid>

@@ -147,7 +147,13 @@
                                 BorderBrush="{StaticResource NightAccent}"
                                 BorderThickness="3"
                                 Margin="0,0,4,4">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <TextBlock
+                                    Text="{TemplateBinding Content}"
+                                    Style="{StaticResource PixelText}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    FontSize="{TemplateBinding FontSize}"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center" />
                             </Border>
                             <Border
                                 x:Name="Glow"
@@ -212,6 +218,14 @@
                             </StackPanel>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                            <Button
+                                Content="{Binding [ChangePasswordTitle]}"
+                                Style="{StaticResource NightButton}"
+                                Width="224"
+                                Height="36"
+                                FontSize="10"
+                                Margin="0,0,12,0"
+                                Click="OpenChangePassword" />
                             <Button
                                 Content="{Binding [SettingsTitle]}"
                                 Style="{StaticResource NightButton}"
