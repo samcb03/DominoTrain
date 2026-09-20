@@ -270,4 +270,85 @@
   <data name="CancelButtonLabel" xml:space="preserve">
     <value>CANCEL</value>
   </data>
+  <data name="SignUpWindowTitle" xml:space="preserve">
+    <value>Domino Train - Sign Up</value>
+  </data>
+  <data name="LoginWindowTitle" xml:space="preserve">
+    <value>Domino Train - Sign Up</value>
+  </data>
+  <data name="LoginSectionTitle" xml:space="preserve">
+    <value>LOG IN</value>
+  </data>
+  <data name="LoginSiderBarLabel" xml:space="preserve">
+    <value>WELCOME BACK</value>
+  </data>
+  <data name="LoginSidebarDescription" xml:space="preserve">
+    <value>Log in to continue your game.</value>
+  </data>
+  <data name="LoginIdentifierLabel" xml:space="preserve">
+    <value>EMAIL OR USERNAME</value>
+  </data>
+  <data name="LoginIdentifierAccessibleName" xml:space="preserve">
+    <value>Email or username field</value>
+  </data>
+  <data name="LoginButtonLabel" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="LoginButtonAccessibleName" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="GuestButtonLabel" xml:space="preserve">
+    <value>PLAY AS A GUEST</value>
+  </data>
+  <data name="GuestButtonAccessibleName" xml:space="preserve">
+    <value>Play as guest</value>
+  </data>
+  <data name="ForgotPasswordLabel" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="ForgotPasswordAccessibleName" xml:space="preserve">
+    <value>Recover password</value>
+  </data>
+  <data name="NoAccountLabel" xml:space="preserve">
+    <value>Don't have an account?</value>
+  </data>
+  <data name="CreateAccountLinkLabel" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="CreateAccountAccessibleName" xml:space="preserve">
+    <value>Go to the sign up</value>
+  </data>
+  <data name="EmptyFieldsMessage" xml:space="preserve">
+    <value>Error: Required fields cannot be empty</value>
+  </data>
+  <data name="InvalidPasswordMessage" xml:space="preserve">
+    <value>Error: The password must have at least {0} characters</value>
+  </data>
+  <data name="EmailAccessibleName" xml:space="preserve">
+    <value>Email address field</value>
+  </data>
+  <data name="UsernameAccessibleName" xml:space="preserve">
+    <value>Username field</value>
+  </data>
+  <data name="PasswordAccessibleName" xml:space="preserve">
+    <value>Password field</value>
+  </data>
+  <data name="AlreadyHaveAccountLabel" xml:space="preserve">
+    <value>Do you already have an account?</value>
+  </data>
+  <data name="GoToLoginLabel" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="OpenProfileButtonLabel" xml:space="preserve">
+    <value>PROFILE</value>
+  </data>
+  <data name="EditButtonLabel" xml:space="preserve">
+    <value>EDIT</value>
+  </data>
+  <data name="SaveProfileAccessibleName" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="CancelEditAccessibleName" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
 </root>

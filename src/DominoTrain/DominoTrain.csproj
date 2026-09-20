@@ -9,6 +9,7 @@
         <NeutralLanguage>es</NeutralLanguage>
     </PropertyGroup>
     <ItemGroup>
+      <None Remove="Resources\Images\avatar_generic_preview.png" />
       <None Remove="Resources\Images\PixelTrain.png" />
     </ItemGroup>
 
@@ -21,6 +22,7 @@
 
     <ItemGroup>
         <Resource Include="Assets/Fonts/PressStart2P-Regular.ttf" />
+        <Resource Include="Resources\Images\avatar_generic_preview.png" />
         <Resource Include="Resources\Images\PixelTrain.png" />
         <None Update="Assets/Fonts/OFL.txt" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>

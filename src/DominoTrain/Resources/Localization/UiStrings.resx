@@ -270,4 +270,85 @@
   <data name="CancelButtonLabel" xml:space="preserve">
     <value>CANCELAR</value>
   </data>
+  <data name="SignUpWindowTitle" xml:space="preserve">
+    <value>Tren de domino - Inicio de sesión</value>
+  </data>
+  <data name="LoginWindowTitle" xml:space="preserve">
+    <value>Tren de domino - Inicio de sesión</value>
+  </data>
+  <data name="LoginSectionTitle" xml:space="preserve">
+    <value>INICIO DE SESION</value>
+  </data>
+  <data name="LoginSiderBarLabel" xml:space="preserve">
+    <value>BIENVENIDO DE VUELTA</value>
+  </data>
+  <data name="LoginSidebarDescription" xml:space="preserve">
+    <value>Inicia sesión para continuar tu partida</value>
+  </data>
+  <data name="LoginIdentifierLabel" xml:space="preserve">
+    <value>CORREO ELECTRÓNICO O USUARIO</value>
+  </data>
+  <data name="LoginIdentifierAccessibleName" xml:space="preserve">
+    <value>Campo de correo electrónico o usuario</value>
+  </data>
+  <data name="LoginButtonLabel" xml:space="preserve">
+    <value>INICIAR SESIÓN</value>
+  </data>
+  <data name="LoginButtonAccessibleName" xml:space="preserve">
+    <value>Iniciar sesión</value>
+  </data>
+  <data name="GuestButtonLabel" xml:space="preserve">
+    <value>JUGAR COMO INVITADO</value>
+  </data>
+  <data name="GuestButtonAccessibleName" xml:space="preserve">
+    <value>Jugar como invitado</value>
+  </data>
+  <data name="ForgotPasswordLabel" xml:space="preserve">
+    <value>¿Olvidaste tu contraseña?</value>
+  </data>
+  <data name="ForgotPasswordAccessibleName" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+  <data name="NoAccountLabel" xml:space="preserve">
+    <value>¿No tienes cuenta?</value>
+  </data>
+  <data name="CreateAccountLinkLabel" xml:space="preserve">
+    <value>Regístrate</value>
+  </data>
+  <data name="CreateAccountAccessibleName" xml:space="preserve">
+    <value>Ir al registro</value>
+  </data>
+  <data name="EmptyFieldsMessage" xml:space="preserve">
+    <value>Error: Los campos obligatorios no pueden estar vacíos</value>
+  </data>
+  <data name="InvalidPasswordMessage" xml:space="preserve">
+    <value>Error: La contraseña debe tener al menos {0} caracteres</value>
+  </data>
+  <data name="EmailAccessibleName" xml:space="preserve">
+    <value>Campo de correo electrónico</value>
+  </data>
+  <data name="UsernameAccessibleName" xml:space="preserve">
+    <value>Campo de nombre de usuario</value>
+  </data>
+  <data name="PasswordAccessibleName" xml:space="preserve">
+    <value>Campo de contraseña</value>
+  </data>
+  <data name="AlreadyHaveAccountLabel" xml:space="preserve">
+    <value>¿Ya tienes una cuenta?</value>
+  </data>
+  <data name="GoToLoginLabel" xml:space="preserve">
+    <value>Inicia sesión</value>
+  </data>
+  <data name="OpenProfileButtonLabel" xml:space="preserve">
+    <value>PERFIL</value>
+  </data>
+  <data name="EditButtonLabel" xml:space="preserve">
+    <value>EDITAR</value>
+  </data>
+  <data name="SaveProfileAccessibleName" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="CancelEditAccessibleName" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
 </root>

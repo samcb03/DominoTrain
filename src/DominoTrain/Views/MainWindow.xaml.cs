@@ -38,4 +38,13 @@ public partial class MainWindow : Window
 
         settingsWindow.ShowDialog();
     }
+
+    private void OpenProfile(object sender, RoutedEventArgs e)
+    {
+        ProfileWindow profileWindow = new ProfileWindow
+        {
+            Owner = this
+        };
+        profileWindow.ShowDialog();
+    }
 }
