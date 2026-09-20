@@ -19,6 +19,16 @@ public partial class MainWindow : Window
         changePasswordWindow.ShowDialog();
     }
 
+    private void OpenDeleteAccount(object sender, RoutedEventArgs e)
+    {
+        DeleteAccountWindow deleteAccountWindow = new DeleteAccountWindow
+        {
+            Owner = this
+        };
+
+        deleteAccountWindow.ShowDialog();
+    }
+
     private void OpenSettings(object sender, RoutedEventArgs e)
     {
         SettingsWindow settingsWindow = new SettingsWindow
