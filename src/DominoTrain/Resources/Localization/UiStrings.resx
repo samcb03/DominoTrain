@@ -154,16 +154,10 @@
     <value>English</value>
   </data>
   <data name="SpanishLanguageDescription" xml:space="preserve">
-    <value>Spanish</value>
+    <value>Español</value>
   </data>
   <data name="EnglishLanguageDescription" xml:space="preserve">
     <value>Inglés</value>
-  </data>
-  <data name="SpanishLanguageAccessibleName" xml:space="preserve">
-    <value>Español</value>
-  </data>
-  <data name="EnglishLanguageAccessibleName" xml:space="preserve">
-    <value>Inglés / English</value>
   </data>
   <data name="BackButtonLabel" xml:space="preserve">
     <value>VOLVER</value>
@@ -180,20 +174,8 @@
   <data name="RegisterTittle" xml:space="preserve">
     <value>Registro</value>
   </data>
-  <data name="NewPassagerSubtitule" xml:space="preserve">
-    <value>■ NUEVO PASAJERO</value>
-  </data>
-  <data name="JoinTableTitle" xml:space="preserve">
-    <value>ÚNETE A LA MESA</value>
-  </data>
-  <data name="RegisterDescription" xml:space="preserve">
-    <value>Toma asiento y regístrate para comenzar tu partida</value>
-  </data>
   <data name="RegisterSectionTitle" xml:space="preserve">
     <value>REGISTRO</value>
-  </data>
-  <data name="CredentialSectionLabel" xml:space="preserve">
-    <value>01/ CREDENCIALES</value>
   </data>
   <data name="EmailAdressLabel" xml:space="preserve">
     <value>CORREO ELECTRÓNICO</value>
@@ -207,23 +189,11 @@
   <data name="SignUpBottonLabel" xml:space="preserve">
     <value>REGISTRARSE</value>
   </data>
-  <data name="SignUpButtonAccesibleName" xml:space="preserve">
-    <value>Registrar nueva cuenta</value>
-  </data>
-  <data name="RegisterSucessMessage" xml:space="preserve">
-    <value>Registro completado correctamente</value>
-  </data>
   <data name="ChangePasswordWindowTitle" xml:space="preserve">
     <value>Domino Train · Cambiar contraseña</value>
   </data>
   <data name="ChangePasswordTitle" xml:space="preserve">
     <value>CAMBIAR CONTRASEÑA</value>
-  </data>
-  <data name="AccountSecuritySectionLabel" xml:space="preserve">
-    <value>01 / SEGURIDAD</value>
-  </data>
-  <data name="ProtectAccountDescription" xml:space="preserve">
-    <value>Tu próximo viaje comienza con una cuenta segura.</value>
   </data>
   <data name="CurrentPasswordLabel" xml:space="preserve">
     <value>CONTRASEÑA ACTUAL</value>
@@ -239,9 +209,6 @@
   </data>
   <data name="PasswordPrivacyNote" xml:space="preserve">
     <value>No compartas tu contraseña con otros jugadores.</value>
-  </data>
-  <data name="CurrentPasswordRequiredMessage" xml:space="preserve">
-    <value>Introduce tu contraseña actual.</value>
   </data>
   <data name="NewPasswordHint" xml:space="preserve">
     <value>Elige una contraseña diferente a la actual y confírmala.</value>
@@ -270,53 +237,29 @@
   <data name="CancelButtonLabel" xml:space="preserve">
     <value>CANCELAR</value>
   </data>
-  <data name="SignUpWindowTitle" xml:space="preserve">
-    <value>Tren de domino - Inicio de sesión</value>
-  </data>
   <data name="LoginWindowTitle" xml:space="preserve">
     <value>Tren de domino - Inicio de sesión</value>
   </data>
   <data name="LoginSectionTitle" xml:space="preserve">
     <value>INICIO DE SESION</value>
   </data>
-  <data name="LoginSiderBarLabel" xml:space="preserve">
-    <value>BIENVENIDO DE VUELTA</value>
-  </data>
-  <data name="LoginSidebarDescription" xml:space="preserve">
-    <value>Inicia sesión para continuar tu partida</value>
-  </data>
   <data name="LoginIdentifierLabel" xml:space="preserve">
     <value>CORREO ELECTRÓNICO O USUARIO</value>
-  </data>
-  <data name="LoginIdentifierAccessibleName" xml:space="preserve">
-    <value>Campo de correo electrónico o usuario</value>
   </data>
   <data name="LoginButtonLabel" xml:space="preserve">
     <value>INICIAR SESIÓN</value>
   </data>
-  <data name="LoginButtonAccessibleName" xml:space="preserve">
-    <value>Iniciar sesión</value>
-  </data>
   <data name="GuestButtonLabel" xml:space="preserve">
     <value>JUGAR COMO INVITADO</value>
   </data>
-  <data name="GuestButtonAccessibleName" xml:space="preserve">
-    <value>Jugar como invitado</value>
-  </data>
   <data name="ForgotPasswordLabel" xml:space="preserve">
     <value>¿Olvidaste tu contraseña?</value>
-  </data>
-  <data name="ForgotPasswordAccessibleName" xml:space="preserve">
-    <value>Recuperar contraseña</value>
   </data>
   <data name="NoAccountLabel" xml:space="preserve">
     <value>¿No tienes cuenta?</value>
   </data>
   <data name="CreateAccountLinkLabel" xml:space="preserve">
     <value>Regístrate</value>
-  </data>
-  <data name="CreateAccountAccessibleName" xml:space="preserve">
-    <value>Ir al registro</value>
   </data>
   <data name="EmptyFieldsMessage" xml:space="preserve">
     <value>Error: Los campos obligatorios no pueden estar vacíos</value>
@@ -326,12 +269,6 @@
   </data>
   <data name="EmailAccessibleName" xml:space="preserve">
     <value>Campo de correo electrónico</value>
-  </data>
-  <data name="UsernameAccessibleName" xml:space="preserve">
-    <value>Campo de nombre de usuario</value>
-  </data>
-  <data name="PasswordAccessibleName" xml:space="preserve">
-    <value>Campo de contraseña</value>
   </data>
   <data name="AlreadyHaveAccountLabel" xml:space="preserve">
     <value>¿Ya tienes una cuenta?</value>
@@ -344,9 +281,6 @@
   </data>
   <data name="EditButtonLabel" xml:space="preserve">
     <value>EDITAR</value>
-  </data>
-  <data name="SaveProfileAccessibleName" xml:space="preserve">
-    <value>Guardar</value>
   </data>
   <data name="CancelEditAccessibleName" xml:space="preserve">
     <value>Cancelar</value>

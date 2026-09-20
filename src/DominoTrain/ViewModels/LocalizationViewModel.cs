@@ -75,7 +75,6 @@ public sealed class LocalizationViewModel : INotifyPropertyChanged
         _culture = CultureInfo.GetCultureInfo(languageCode);
         UiStrings.Culture = _culture;
 
-        // An empty property name refreshes every translated label and language selection.
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(string.Empty));
     }
 }

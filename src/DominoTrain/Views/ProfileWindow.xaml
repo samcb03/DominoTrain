@@ -4,7 +4,6 @@
     xmlns:viewModels="clr-namespace:DominoTrain.ViewModels"
     DataContext="{x:Static viewModels:LocalizationViewModel.Instance}"
     x:Class="DominoTrain.Views.ProfileWindow"
-    Title="{Binding [ProfileWindowTitle]}"
     Width="1220"
     Height="880"
     MinWidth="960"
@@ -299,7 +298,6 @@
                             BorderThickness="2"
                             Padding="12,9">
                             <TextBlock
-                                Text="{Binding [ProfileSectionTitle]}"
                                 Style="{StaticResource PixelTextDark}"
                                 FontSize="9" />
                         </Border>
@@ -331,8 +329,7 @@
                                         BorderThickness="0,0,4,0">
                                         <Grid
                                             Width="170"
-                                            Height="170"
-                                            AutomationProperties.Name="{Binding [AvatarAccessibleName]}">
+                                            Height="170">
                                             <Border Background="{StaticResource NightBorder}" Margin="4,4,0,0" />
                                             <Border
                                                 Background="{StaticResource NightInput}"
@@ -355,7 +352,6 @@
                                                 VerticalAlignment="Bottom"
                                                 Margin="0,0,-14,-12"
                                                 Click="EditButton_Click"
-                                                AutomationProperties.Name="{Binding [EditAvatarAccessibleName]}"
                                                 x:FieldModifier="private">
                                                 <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
                                                       Stretch="Uniform" Width="20" Height="20" Margin="2"
@@ -397,7 +393,6 @@
                                                 Width="360"
                                                 Style="{StaticResource ProfileTextBox}"
                                                 IsReadOnly="True"
-                                                AutomationProperties.Name="{Binding [UsernameAccessibleName]}"
                                                 x:FieldModifier="private" />
 
                                             <Button
@@ -406,7 +401,6 @@
                                                 Margin="14,0,0,0"
                                                 Style="{StaticResource ProfileIconButton}"
                                                 Click="EditButton_Click"
-                                                AutomationProperties.Name="{Binding [EditUsernameAccessibleName]}"
                                                 x:FieldModifier="private">
                                                 <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
                                                       Stretch="Uniform" Width="20" Height="20" Margin="2"
@@ -431,7 +425,6 @@
                                                 Grid.Column="3"
                                                 Style="{StaticResource ProfileIconButton}"
                                                 Click="CloseButton_Click"
-                                                AutomationProperties.Name="{Binding [CloseAccessibleName]}"
                                                 x:FieldModifier="private">
                                                 <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
                                                       Stretch="Uniform" Width="16" Height="16"
@@ -451,7 +444,6 @@
 
                                         <TextBlock
                                             Grid.Row="1"
-                                            Text="{Binding [BiographyLabel]}"
                                             Style="{StaticResource ProfileLabel}"
                                             FontSize="9"
                                             Margin="0,14,0,6" />
@@ -461,11 +453,10 @@
                                             Grid.Row="2"
                                             Style="{StaticResource ProfileBiographyTextBox}"
                                             IsReadOnly="True"
-                                            AutomationProperties.Name="{Binding [BiographyAccessibleName]}"
                                             x:FieldModifier="private" />
 
                                         <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,12,0,0" HorizontalAlignment="Right">
-                                            <Button Style="{StaticResource ProfileIconButton}" Margin="0,0,14,0" Click="InstagramButton_Click" AutomationProperties.Name="{Binding [InstagramAccessibleName]}">
+                                            <Button Style="{StaticResource ProfileIconButton}" Margin="0,0,14,0" Click="InstagramButton_Click">
                                                 <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
                                                       Stretch="Uniform" Width="22" Height="22"
                                                       RenderOptions.EdgeMode="Aliased">
@@ -481,7 +472,7 @@
                                                 </Path>
                                             </Button>
 
-                                            <Button Style="{StaticResource ProfileIconButton}" Margin="0,0,14,0" Click="XButton_Click" AutomationProperties.Name="{Binding [XAccessibleName]}">
+                                            <Button Style="{StaticResource ProfileIconButton}" Margin="0,0,14,0" Click="XButton_Click">
                                                 <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
                                                       Stretch="Uniform" Width="20" Height="20"
                                                       RenderOptions.EdgeMode="Aliased">
@@ -505,7 +496,7 @@
                                             </Button>
 
                                             <!-- Facebook -->
-                                            <Button Style="{StaticResource ProfileIconButton}" Click="FacebookButton_Click" AutomationProperties.Name="{Binding [FacebookAccessibleName]}">
+                                            <Button Style="{StaticResource ProfileIconButton}" Click="FacebookButton_Click">
                                                 <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
                                                       Stretch="Uniform" Width="22" Height="22"
                                                       RenderOptions.EdgeMode="Aliased">
@@ -537,7 +528,7 @@
                                             <RowDefinition Height="*" />
                                         </Grid.RowDefinitions>
                                         <DockPanel>
-                                            <TextBlock Text="{Binding [AvatarSectionLabel]}" Style="{StaticResource PixelTextDark}" FontSize="10" VerticalAlignment="Center" DockPanel.Dock="Left" Margin="0,0,18,0" />
+                                            <TextBlock Style="{StaticResource PixelTextDark}" FontSize="10" VerticalAlignment="Center" DockPanel.Dock="Left" Margin="0,0,18,0" />
                                             <Border Background="{StaticResource NightBorder}" Height="2" VerticalAlignment="Center" />
                                         </DockPanel>
                                         <ListBox
@@ -547,7 +538,6 @@
                                             VerticalAlignment="Top"
                                             HorizontalAlignment="Left"
                                             Margin="0,10,0,0"
-                                            AutomationProperties.Name="{Binding [AvatarListAccessibleName]}"
                                             x:FieldModifier="private">
                                             <ListBox.ItemTemplate>
                                                 <DataTemplate>
@@ -568,18 +558,18 @@
                                             </Grid.RowDefinitions>
 
                                             <DockPanel>
-                                                <TextBlock Text="{Binding [ProfileStatsSectionLabel]}" Style="{StaticResource PixelTextDark}" FontSize="10" VerticalAlignment="Center" DockPanel.Dock="Left" Margin="0,0,14,0" />
+                                                <TextBlock Style="{StaticResource PixelTextDark}" FontSize="10" VerticalAlignment="Center" DockPanel.Dock="Left" Margin="0,0,14,0" />
                                                 <Border Background="{StaticResource NightBorder}" Height="2" VerticalAlignment="Center" />
                                             </DockPanel>
 
                                             <StackPanel Grid.Row="1" Margin="0,14,0,0">
-                                                <TextBlock Text="{Binding [GamesPlayedLabel]}" Style="{StaticResource ProfileLabel}" FontSize="9" />
+                                                <TextBlock Style="{StaticResource ProfileLabel}" FontSize="9" />
                                                 <TextBlock x:Name="_gamesPlayedValueTextBlock" Style="{StaticResource PixelTextLight}" FontSize="18" Margin="0,8,0,20" x:FieldModifier="private" />
 
-                                                <TextBlock Text="{Binding [WinsLabel]}" Style="{StaticResource ProfileLabel}" FontSize="9" />
+                                                <TextBlock Style="{StaticResource ProfileLabel}" FontSize="9" />
                                                 <TextBlock x:Name="_winsValueTextBlock" Style="{StaticResource PixelTextLight}" FontSize="18" Margin="0,8,0,20" x:FieldModifier="private" />
 
-                                                <TextBlock Text="{Binding [MemberSinceLabel]}" Style="{StaticResource ProfileLabel}" FontSize="9" />
+                                                <TextBlock Style="{StaticResource ProfileLabel}" FontSize="9" />
                                                 <TextBlock x:Name="_memberSinceValueTextBlock" Style="{StaticResource PixelTextLight}" FontSize="18" Margin="0,8,0,0" x:FieldModifier="private" />
                                             </StackPanel>
 
@@ -596,7 +586,6 @@
                                                     Content="{Binding [EditButtonLabel]}"
                                                     Style="{StaticResource ProfilePrimaryButton}"
                                                     Click="EditButton_Click"
-                                                    AutomationProperties.Name="{Binding [EditProfileAccessibleName]}"
                                                     x:FieldModifier="private" />
 
                                                 <Button
@@ -615,7 +604,6 @@
                                                     Style="{StaticResource ProfilePrimaryButton}"
                                                     Visibility="Collapsed"
                                                     Click="SaveButton_Click"
-                                                    AutomationProperties.Name="{Binding [SaveProfileAccessibleName]}"
                                                     x:FieldModifier="private" />
                                             </Grid>
                                         </Grid>

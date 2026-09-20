@@ -1,7 +1,6 @@
-﻿using DominoTrain.src.Resources;
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
 using System.Windows;
-using AppStrings = DominoTrain.src.Resources.Strings; // <-- alias
+using AppStrings = DominoTrain.Resources.Localization.UiStrings;
 
 namespace DominoTrain.src.Views
 {
@@ -45,7 +44,7 @@ namespace DominoTrain.src.Views
 
         private void ShowError(string message)
         {
-            MessageBox.Show(this, message, AppStrings.MessageBoxTitle, MessageBoxButton.OK, MessageBoxImage.Warning);
+            MessageBox.Show(this, message, AppStrings.GameTitle, MessageBoxButton.OK, MessageBoxImage.Warning);
         }
     }
 }

@@ -29,19 +29,7 @@
                     <Grid VerticalAlignment="Top" Margin="0,6,8,0">
                         <StackPanel Orientation="Horizontal">
                             <Grid Width="40" Height="46" Margin="0,0,16,0">
-                                <Border Background="{StaticResource Ink}" Margin="4,4,0,0" />
-                                <Border
-                                    Background="{StaticResource Glacier}"
-                                    BorderBrush="{StaticResource Ink}"
-                                    BorderThickness="3"
-                                    Margin="0,0,4,4">
-                                    <Canvas>
-                                        <Path
-                                            Fill="{StaticResource Ink}"
-                                            Data="M5,5 H11 V11 H5 Z M19,5 H25 V11 H19 Z M0,16 H30 V19 H0 Z M12,25
-                                                H18 V31 H12 Z" />
-                                    </Canvas>
-                                </Border>
+                                <Image Margin="0,0,0,-1" Source="/Resources/Images/MiniDominoTile.png" Stretch="Fill"/>
                             </Grid>
                             <StackPanel VerticalAlignment="Center">
                                 <TextBlock
@@ -160,7 +148,6 @@
                                                 x:Name="_musicVolumeSlider"
                                                 Value="{x:Static resources:SettingsDefaults.DefaultMusicVolume}"
                                                 Style="{StaticResource PixelSlider}"
-                                                AutomationProperties.Name="{Binding [MusicVolumeAccessibleName]}"
                                                 Margin="0,24,0,22"
                                                 Grid.RowSpan="3"
                                                 x:FieldModifier="private" />
@@ -244,7 +231,6 @@
                                             GroupName="Language"
                                             IsChecked="{Binding IsSpanishSelected, Mode=TwoWay}"
                                             Style="{StaticResource LanguageOption}"
-                                            AutomationProperties.Name="{Binding [SpanishLanguageAccessibleName]}"
                                             x:FieldModifier="private">
                                             <StackPanel Orientation="Horizontal">
                                                 <Border
@@ -279,7 +265,6 @@
                                             GroupName="Language"
                                             IsChecked="{Binding IsEnglishSelected, Mode=TwoWay}"
                                             Style="{StaticResource LanguageOption}"
-                                            AutomationProperties.Name="{Binding [EnglishLanguageAccessibleName]}"
                                             x:FieldModifier="private">
                                             <StackPanel Orientation="Horizontal">
                                                 <Border
@@ -318,7 +303,6 @@
                                                 Width="154"
                                                 Height="50"
                                                 IsCancel="True"
-                                                AutomationProperties.Name="{Binding [ReturnToPreviousScreenAccessibleName]}"
                                                 Click="CloseSettings" />
                                             <Button
                                                 Content="{Binding [SaveButtonLabel]}"
@@ -328,7 +312,6 @@
                                                 Height="50"
                                                 Background="{StaticResource Ink}"
                                                 Foreground="{StaticResource Glacier}"
-                                                AutomationProperties.Name="{Binding [ApplySettingsAccessibleName]}"
                                                 Click="CloseSettings" />
                                         </Grid>
                                     </Grid>
