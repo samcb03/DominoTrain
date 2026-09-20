@@ -246,4 +246,28 @@
   <data name="NewPasswordHint" xml:space="preserve">
     <value>Elige una contraseña diferente a la actual y confírmala.</value>
   </data>
+  <data name="DeleteAccountWindowTitle" xml:space="preserve">
+    <value>Domino Train · Eliminar cuenta</value>
+  </data>
+  <data name="DeleteAccountTitle" xml:space="preserve">
+    <value>ELIMINAR CUENTA</value>
+  </data>
+  <data name="DeleteAccountDescription" xml:space="preserve">
+    <value>Confirma que deseas eliminar tu cuenta.</value>
+  </data>
+  <data name="DeleteAccountWarningTitle" xml:space="preserve">
+    <value>ACCIÓN PERMANENTE</value>
+  </data>
+  <data name="DeleteAccountWarningDescription" xml:space="preserve">
+    <value>Una vez eliminada, no podrás recuperar tu cuenta.</value>
+  </data>
+  <data name="DeleteAccountPasswordHint" xml:space="preserve">
+    <value>Introduce tu contraseña para confirmar tu identidad.</value>
+  </data>
+  <data name="DeleteAccountConfirmationLabel" xml:space="preserve">
+    <value>Entiendo que esta acción no se puede deshacer.</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>CANCELAR</value>
+  </data>
 </root>

@@ -246,4 +246,28 @@
   <data name="NewPasswordHint" xml:space="preserve">
     <value>Choose a password different from your current one and confirm it.</value>
   </data>
+  <data name="DeleteAccountWindowTitle" xml:space="preserve">
+    <value>Domino Train · Delete account</value>
+  </data>
+  <data name="DeleteAccountTitle" xml:space="preserve">
+    <value>DELETE ACCOUNT</value>
+  </data>
+  <data name="DeleteAccountDescription" xml:space="preserve">
+    <value>Confirm that you want to delete your account.</value>
+  </data>
+  <data name="DeleteAccountWarningTitle" xml:space="preserve">
+    <value>PERMANENT ACTION</value>
+  </data>
+  <data name="DeleteAccountWarningDescription" xml:space="preserve">
+    <value>Once deleted, your account cannot be recovered.</value>
+  </data>
+  <data name="DeleteAccountPasswordHint" xml:space="preserve">
+    <value>Enter your password to confirm your identity.</value>
+  </data>
+  <data name="DeleteAccountConfirmationLabel" xml:space="preserve">
+    <value>I understand that this action cannot be undone.</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
 </root>
