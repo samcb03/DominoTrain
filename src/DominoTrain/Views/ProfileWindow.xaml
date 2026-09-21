@@ -12,7 +12,6 @@
     UseLayoutRounding="True"
     SnapsToDevicePixels="True"
     ShowInTaskbar="False">
-
     <Window.Resources>
         <DrawingBrush
             x:Key="ProfileGrid"
@@ -23,7 +22,7 @@
             Viewbox="0,0,24,24"
             ViewboxUnits="Absolute">
             <DrawingBrush.Drawing>
-                <GeometryDrawing Brush="{StaticResource NightGridLine}">
+                <GeometryDrawing Brush="{StaticResource Mint}">
                     <GeometryDrawing.Geometry>
                         <GeometryGroup>
                             <RectangleGeometry Rect="0,23,24,1" />
@@ -34,31 +33,38 @@
             </DrawingBrush.Drawing>
         </DrawingBrush>
 
-        <Style x:Key="ProfileLabel" TargetType="TextBlock" BasedOn="{StaticResource PixelTextLight}">
-            <Setter Property="Foreground" Value="{StaticResource NightMuted}" />
+        <Style x:Key="ProfileLabel" TargetType="TextBlock" BasedOn="{StaticResource PixelText}">
+            <Setter Property="Foreground" Value="{StaticResource Ink}" />
+        </Style>
+
+        <Style x:Key="ProfileIconPath" TargetType="Path">
+            <Setter Property="Fill" Value="{StaticResource Ink}" />
+            <Setter Property="Stretch" Value="Uniform" />
+            <Setter Property="RenderOptions.EdgeMode" Value="Aliased" />
         </Style>
 
         <Style x:Key="ProfileTextBox" TargetType="TextBox">
             <Setter Property="FontFamily" Value="Consolas" />
             <Setter Property="FontSize" Value="16" />
             <Setter Property="Padding" Value="12,0" />
-            <Setter Property="Foreground" Value="{StaticResource NightText}" />
-            <Setter Property="CaretBrush" Value="{StaticResource NightAccent}" />
-            <Setter Property="SelectionBrush" Value="{StaticResource NightBorder}" />
+            <Setter Property="Background" Value="{StaticResource Frost}" />
+            <Setter Property="Foreground" Value="{StaticResource Ink}" />
+            <Setter Property="CaretBrush" Value="{StaticResource Ink}" />
+            <Setter Property="SelectionBrush" Value="{StaticResource Mint}" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Border
                             x:Name="Frame"
-                            Background="{StaticResource NightInput}"
-                            BorderBrush="{StaticResource NightBorder}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{StaticResource Ink}"
                             BorderThickness="2"
                             Padding="{TemplateBinding Padding}">
                             <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center" />
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsKeyboardFocused" Value="True">
-                                <Setter TargetName="Frame" Property="BorderBrush" Value="{StaticResource NightAccent}" />
+                                <Setter TargetName="Frame" Property="BorderThickness" Value="3" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -66,7 +72,7 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsReadOnly" Value="True">
-                    <Setter Property="Foreground" Value="{StaticResource NightMuted}" />
+                    <Setter Property="Background" Value="{StaticResource Mist}" />
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -82,15 +88,15 @@
                     <ControlTemplate TargetType="TextBox">
                         <Border
                             x:Name="Frame"
-                            Background="{StaticResource NightInput}"
-                            BorderBrush="{StaticResource NightBorder}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{StaticResource Ink}"
                             BorderThickness="2"
                             Padding="{TemplateBinding Padding}">
                             <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Top" />
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsKeyboardFocused" Value="True">
-                                <Setter TargetName="Frame" Property="BorderBrush" Value="{StaticResource NightAccent}" />
+                                <Setter TargetName="Frame" Property="BorderThickness" Value="3" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -100,19 +106,19 @@
 
         <Style x:Key="ProfileButton" TargetType="Button">
             <Setter Property="FontSize" Value="10" />
-            <Setter Property="Foreground" Value="{StaticResource NightAccent}" />
-            <Setter Property="Background" Value="{StaticResource NightInput}" />
+            <Setter Property="Foreground" Value="{StaticResource Ink}" />
+            <Setter Property="Background" Value="{StaticResource Frost}" />
             <Setter Property="Cursor" Value="Hand" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Grid x:Name="Root" SnapsToDevicePixels="True">
-                            <Border x:Name="Shadow" Background="{StaticResource NightBorder}" Margin="4,4,0,0" />
+                            <Border x:Name="Shadow" Background="{StaticResource Ink}" Margin="4,4,0,0" />
                             <Border
                                 x:Name="Face"
                                 Margin="0,0,4,4"
                                 Background="{TemplateBinding Background}"
-                                BorderBrush="{StaticResource NightAccent}"
+                                BorderBrush="{StaticResource Ink}"
                                 BorderThickness="3">
                                 <TextBlock
                                     Text="{TemplateBinding Content}"
@@ -153,25 +159,25 @@
         </Style>
 
         <Style x:Key="ProfilePrimaryButton" TargetType="Button" BasedOn="{StaticResource ProfileButton}">
-            <Setter Property="Background" Value="{StaticResource NightAccent}" />
-            <Setter Property="Foreground" Value="{StaticResource NightOnAccent}" />
+            <Setter Property="Background" Value="{StaticResource Ink}" />
+            <Setter Property="Foreground" Value="{StaticResource Glacier}" />
         </Style>
 
         <Style x:Key="ProfileIconButton" TargetType="Button">
             <Setter Property="Width" Value="44" />
             <Setter Property="Height" Value="44" />
             <Setter Property="Cursor" Value="Hand" />
-            <Setter Property="Foreground" Value="{StaticResource NightAccent}" />
+            <Setter Property="Foreground" Value="{StaticResource Ink}" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Grid x:Name="Root" SnapsToDevicePixels="True">
-                            <Border x:Name="Shadow" Background="{StaticResource NightBorder}" Margin="3,3,0,0" />
+                            <Border x:Name="Shadow" Background="{StaticResource Ink}" Margin="3,3,0,0" />
                             <Border
                                 x:Name="Face"
                                 Margin="0,0,3,3"
-                                Background="{StaticResource NightInput}"
-                                BorderBrush="{StaticResource NightAccent}"
+                                Background="{StaticResource Frost}"
+                                BorderBrush="{StaticResource Ink}"
                                 BorderThickness="2">
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
@@ -211,18 +217,17 @@
                     <ControlTemplate TargetType="ListBoxItem">
                         <Border
                             x:Name="Frame"
-                            Background="{StaticResource NightInput}"
-                            BorderBrush="{StaticResource NightBorder}"
+                            Background="{StaticResource Frost}"
+                            BorderBrush="{StaticResource Ink}"
                             BorderThickness="3">
                             <ContentPresenter />
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Frame" Property="BorderBrush" Value="{StaticResource NightMuted}" />
+                                <Setter TargetName="Frame" Property="Background" Value="{StaticResource Seafoam}" />
                             </Trigger>
                             <Trigger Property="IsSelected" Value="True">
-                                <Setter TargetName="Frame" Property="BorderBrush" Value="{StaticResource NightAccent}" />
-                                <Setter TargetName="Frame" Property="Background" Value="{StaticResource NightSidebar}" />
+                                <Setter TargetName="Frame" Property="Background" Value="{StaticResource Aqua}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -256,7 +261,7 @@
         </Style>
     </Window.Resources>
 
-    <Grid Background="{StaticResource NightBackground}">
+    <Grid Background="{StaticResource Mist}">
         <Rectangle Fill="{StaticResource ProfileGrid}" Opacity="0.6" IsHitTestVisible="False" />
         <Viewbox Stretch="Uniform">
             <Grid Width="1200" Height="820" Margin="0" TextOptions.TextFormattingMode="Display">
@@ -266,49 +271,51 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="40" />
                     </Grid.RowDefinitions>
-                    
+
                     <Grid VerticalAlignment="Top" Margin="0,6,8,0">
                         <StackPanel Orientation="Horizontal">
                             <Grid Width="40" Height="46" Margin="0,0,16,0">
-                                <Border Background="{StaticResource NightBorder}" Margin="4,4,0,0" />
+                                <Border Background="{StaticResource Ink}" Margin="4,4,0,0" />
                                 <Border
-                                    Background="{StaticResource NightInput}"
-                                    BorderBrush="{StaticResource NightAccent}"
+                                    Background="{StaticResource Frost}"
+                                    BorderBrush="{StaticResource Ink}"
                                     BorderThickness="3"
                                     Margin="0,0,4,4">
                                     <Canvas>
                                         <Path
-                                            Fill="{StaticResource NightAccent}"
-                                            Data="M5,5 H11 V11 H5 Z M19,5 H25 V11 H19 Z M0,16 H30 V19 H0 Z M12,25 H18 V31 H12 Z" />
+                                            Fill="{StaticResource Ink}"
+                                            Data="M5,5 H11 V11 H5 Z M19,5 H25 V11 H19 Z M0,16 H30 V19 H0 Z M12,25
+                                                H18 V31 H12 Z" />
                                     </Canvas>
                                 </Border>
                             </Grid>
                             <StackPanel VerticalAlignment="Center">
                                 <TextBlock
                                     Text="{Binding [GameTitle]}"
-                                    Style="{StaticResource PixelTextLight}"
+                                    Style="{StaticResource PixelText}"
                                     FontSize="16" />
                             </StackPanel>
                         </StackPanel>
                         <Border
                             HorizontalAlignment="Right"
                             VerticalAlignment="Center"
-                            Background="{StaticResource NightInput}"
-                            BorderBrush="{StaticResource NightAccent}"
+                            Background="{StaticResource Frost}"
+                            BorderBrush="{StaticResource Ink}"
                             BorderThickness="2"
                             Padding="12,9">
                             <TextBlock
-                                Style="{StaticResource PixelTextDark}"
+                                Text="{Binding [ProfileSectionTitle]}"
+                                Style="{StaticResource PixelText}"
                                 FontSize="9" />
                         </Border>
                     </Grid>
 
                     <Grid Grid.Row="1" Margin="0,4,0,8">
-                        <Border Background="{StaticResource NightShadow}" Margin="8,8,0,0" />
+                        <Border Background="{StaticResource Ink}" Margin="8,8,0,0" />
                         <Border
                             Margin="0,0,8,8"
-                            Background="{StaticResource NightCard}"
-                            BorderBrush="{StaticResource NightBorder}"
+                            Background="{StaticResource Glacier}"
+                            BorderBrush="{StaticResource Ink}"
                             BorderThickness="4">
                             <Grid>
                                 <Grid.RowDefinitions>
@@ -324,27 +331,27 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Border
-                                        Background="{StaticResource NightSidebar}"
-                                        BorderBrush="{StaticResource NightBorder}"
+                                        Background="{StaticResource Aqua}"
+                                        BorderBrush="{StaticResource Ink}"
                                         BorderThickness="0,0,4,0">
                                         <Grid
                                             Width="170"
-                                            Height="170">
-                                            <Border Background="{StaticResource NightBorder}" Margin="4,4,0,0" />
+                                            Height="170"
+                                            AutomationProperties.Name="{Binding [AvatarAccessibleName]}">
+                                            <Border Background="{StaticResource Ink}" Margin="4,4,0,0" />
                                             <Border
-                                                Background="{StaticResource NightInput}"
-                                                BorderBrush="{StaticResource NightAccent}"
+                                                Background="{StaticResource Frost}"
+                                                BorderBrush="{StaticResource Ink}"
                                                 BorderThickness="3"
                                                 Margin="0,0,4,4">
-
                                                 <Image
                                                     x:Name="_mainAvatarImage"
-                                                    Source="pack://application:,,,/Resources/Images/avatar_generic_preview.png"
+                                                    Source="/Resources/Images/avatar_generic_preview.png"
                                                     Width="160"
                                                     Height="160"
-                                                    RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                                                    RenderOptions.BitmapScalingMode="NearestNeighbor"
+                                                    x:FieldModifier="private" />
                                             </Border>
-
                                             <Button
                                                 x:Name="_editAvatarButton"
                                                 Style="{StaticResource ProfileIconButton}"
@@ -353,9 +360,7 @@
                                                 Margin="0,0,-14,-12"
                                                 Click="EditButton_Click"
                                                 x:FieldModifier="private">
-                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
-                                                      Stretch="Uniform" Width="20" Height="20" Margin="2"
-                                                      RenderOptions.EdgeMode="Aliased">
+                                                <Path Style="{StaticResource ProfileIconPath}" Width="20" Height="20">
                                                     <Path.Data>
                                                         <GeometryGroup FillRule="Nonzero">
                                                             <RectangleGeometry Rect="6,1,2,2" />
@@ -380,8 +385,10 @@
                                             <RowDefinition Height="*" />
                                         </Grid.RowDefinitions>
 
+                                        <!-- Username, edit pencil, social networks and close -->
                                         <Grid>
                                             <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
                                                 <ColumnDefinition Width="Auto" />
                                                 <ColumnDefinition Width="Auto" />
                                                 <ColumnDefinition Width="*" />
@@ -402,9 +409,7 @@
                                                 Style="{StaticResource ProfileIconButton}"
                                                 Click="EditButton_Click"
                                                 x:FieldModifier="private">
-                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
-                                                      Stretch="Uniform" Width="20" Height="20" Margin="2"
-                                                      RenderOptions.EdgeMode="Aliased">
+                                                <Path Style="{StaticResource ProfileIconPath}" Width="20" Height="20">
                                                     <Path.Data>
                                                         <GeometryGroup FillRule="Nonzero">
                                                             <RectangleGeometry Rect="6,1,2,2" />
@@ -420,15 +425,80 @@
                                                 </Path>
                                             </Button>
 
+                                            <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="28,0,0,0">
+                                                <Button
+                                                    Style="{StaticResource ProfileIconButton}"
+                                                    Margin="0,0,14,0"
+                                                    Click="InstagramButton_Click"
+                                                    AutomationProperties.Name="{Binding [InstagramAccessibleName]}">
+                                                    <Path
+                                                        Style="{StaticResource ProfileIconPath}"
+                                                        Width="22"
+                                                        Height="22">
+                                                        <Path.Data>
+                                                            <GeometryGroup FillRule="EvenOdd">
+                                                                <RectangleGeometry Rect="0,0,10,10" />
+                                                                <RectangleGeometry Rect="1,1,8,8" />
+                                                                <RectangleGeometry Rect="3,3,4,4" />
+                                                                <RectangleGeometry Rect="4,4,2,2" />
+                                                                <RectangleGeometry Rect="7,2,1,1" />
+                                                            </GeometryGroup>
+                                                        </Path.Data>
+                                                    </Path>
+                                                </Button>
+                                                <Button
+                                                    Style="{StaticResource ProfileIconButton}"
+                                                    Margin="0,0,14,0"
+                                                    Click="XButton_Click"
+                                                    AutomationProperties.Name="{Binding [XAccessibleName]}">
+                                                    <Path
+                                                        Style="{StaticResource ProfileIconPath}"
+                                                        Width="20"
+                                                        Height="20">
+                                                        <Path.Data>
+                                                            <GeometryGroup FillRule="Nonzero">
+                                                                <RectangleGeometry Rect="1,1,3,2" />
+                                                                <RectangleGeometry Rect="2,2,3,2" />
+                                                                <RectangleGeometry Rect="3,3,3,2" />
+                                                                <RectangleGeometry Rect="4,4,3,2" />
+                                                                <RectangleGeometry Rect="5,5,3,2" />
+                                                                <RectangleGeometry Rect="6,6,3,2" />
+                                                                <RectangleGeometry Rect="7,7,3,2" />
+                                                                <RectangleGeometry Rect="7,1,2,2" />
+                                                                <RectangleGeometry Rect="6,2,2,2" />
+                                                                <RectangleGeometry Rect="5,3,2,2" />
+                                                                <RectangleGeometry Rect="2,6,2,2" />
+                                                                <RectangleGeometry Rect="1,7,2,2" />
+                                                            </GeometryGroup>
+                                                        </Path.Data>
+                                                    </Path>
+                                                </Button>
+                                                <Button
+                                                    Style="{StaticResource ProfileIconButton}"
+                                                    Click="FacebookButton_Click"
+                                                    AutomationProperties.Name="{Binding [FacebookAccessibleName]}">
+                                                    <Path
+                                                        Style="{StaticResource ProfileIconPath}"
+                                                        Width="22"
+                                                        Height="22">
+                                                        <Path.Data>
+                                                            <GeometryGroup FillRule="Nonzero">
+                                                                <RectangleGeometry Rect="5,2,2,8" />
+                                                                <RectangleGeometry Rect="3,4,5,2" />
+                                                                <RectangleGeometry Rect="5,1,4,2" />
+                                                            </GeometryGroup>
+                                                        </Path.Data>
+                                                    </Path>
+                                                </Button>
+                                            </StackPanel>
+
                                             <Button
                                                 x:Name="_closeButton"
-                                                Grid.Column="3"
+                                                Grid.Column="4"
                                                 Style="{StaticResource ProfileIconButton}"
                                                 Click="CloseButton_Click"
                                                 x:FieldModifier="private">
-                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
-                                                      Stretch="Uniform" Width="16" Height="16"
-                                                      RenderOptions.EdgeMode="Aliased">
+                                                <Path Style="{StaticResource ProfileIconPath}" Width="16" Height="16">
                                                     <Path.Data>
                                                         <GeometryGroup FillRule="Nonzero">
                                                             <RectangleGeometry Rect="1,1,2,2" />
@@ -454,66 +524,10 @@
                                             Style="{StaticResource ProfileBiographyTextBox}"
                                             IsReadOnly="True"
                                             x:FieldModifier="private" />
-
-                                        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,12,0,0" HorizontalAlignment="Right">
-                                            <Button Style="{StaticResource ProfileIconButton}" Margin="0,0,14,0" Click="InstagramButton_Click">
-                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
-                                                      Stretch="Uniform" Width="22" Height="22"
-                                                      RenderOptions.EdgeMode="Aliased">
-                                                    <Path.Data>
-                                                        <GeometryGroup FillRule="EvenOdd">
-                                                            <RectangleGeometry Rect="0,0,10,10" />
-                                                            <RectangleGeometry Rect="1,1,8,8" />
-                                                            <RectangleGeometry Rect="3,3,4,4" />
-                                                            <RectangleGeometry Rect="4,4,2,2" />
-                                                            <RectangleGeometry Rect="7,2,1,1" />
-                                                        </GeometryGroup>
-                                                    </Path.Data>
-                                                </Path>
-                                            </Button>
-
-                                            <Button Style="{StaticResource ProfileIconButton}" Margin="0,0,14,0" Click="XButton_Click">
-                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
-                                                      Stretch="Uniform" Width="20" Height="20"
-                                                      RenderOptions.EdgeMode="Aliased">
-                                                    <Path.Data>
-                                                        <GeometryGroup FillRule="Nonzero">
-                                                            <RectangleGeometry Rect="1,1,3,2" />
-                                                            <RectangleGeometry Rect="2,2,3,2" />
-                                                            <RectangleGeometry Rect="3,3,3,2" />
-                                                            <RectangleGeometry Rect="4,4,3,2" />
-                                                            <RectangleGeometry Rect="5,5,3,2" />
-                                                            <RectangleGeometry Rect="6,6,3,2" />
-                                                            <RectangleGeometry Rect="7,7,3,2" />
-                                                            <RectangleGeometry Rect="7,1,2,2" />
-                                                            <RectangleGeometry Rect="6,2,2,2" />
-                                                            <RectangleGeometry Rect="5,3,2,2" />
-                                                            <RectangleGeometry Rect="2,6,2,2" />
-                                                            <RectangleGeometry Rect="1,7,2,2" />
-                                                        </GeometryGroup>
-                                                    </Path.Data>
-                                                </Path>
-                                            </Button>
-
-                                            <!-- Facebook -->
-                                            <Button Style="{StaticResource ProfileIconButton}" Click="FacebookButton_Click">
-                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
-                                                      Stretch="Uniform" Width="22" Height="22"
-                                                      RenderOptions.EdgeMode="Aliased">
-                                                    <Path.Data>
-                                                        <GeometryGroup FillRule="Nonzero">
-                                                            <RectangleGeometry Rect="5,2,2,8" />
-                                                            <RectangleGeometry Rect="3,4,5,2" />
-                                                            <RectangleGeometry Rect="5,1,4,2" />
-                                                        </GeometryGroup>
-                                                    </Path.Data>
-                                                </Path>
-                                            </Button>
-                                        </StackPanel>
                                     </Grid>
                                 </Grid>
 
-                                <Rectangle Grid.Row="1" Fill="{StaticResource NightBorder}" />
+                                <Rectangle Grid.Row="1" Fill="{StaticResource Ink}" />
 
                                 <Grid Grid.Row="2">
                                     <Grid.ColumnDefinitions>
@@ -528,8 +542,17 @@
                                             <RowDefinition Height="*" />
                                         </Grid.RowDefinitions>
                                         <DockPanel>
-                                            <TextBlock Style="{StaticResource PixelTextDark}" FontSize="10" VerticalAlignment="Center" DockPanel.Dock="Left" Margin="0,0,18,0" />
-                                            <Border Background="{StaticResource NightBorder}" Height="2" VerticalAlignment="Center" />
+                                            <TextBlock
+                                                Text="{Binding [AvatarSectionLabel]}"
+                                                Style="{StaticResource PixelText}"
+                                                FontSize="10"
+                                                VerticalAlignment="Center"
+                                                DockPanel.Dock="Left"
+                                                Margin="0,0,18,0" />
+                                            <Border
+                                                Background="{StaticResource Ink}"
+                                                Height="2"
+                                                VerticalAlignment="Center" />
                                         </DockPanel>
                                         <ListBox
                                             x:Name="_avatarListBox"
@@ -541,15 +564,19 @@
                                             x:FieldModifier="private">
                                             <ListBox.ItemTemplate>
                                                 <DataTemplate>
-                                                    <Image Source="{Binding}" Width="80" Height="80" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                                                    <Image
+                                                        Source="{Binding}"
+                                                        Width="80"
+                                                        Height="80"
+                                                        RenderOptions.BitmapScalingMode="NearestNeighbor" />
                                                 </DataTemplate>
                                             </ListBox.ItemTemplate>
                                         </ListBox>
                                     </Grid>
 
-                                    <Rectangle Grid.Column="1" Fill="{StaticResource NightBorder}" />
+                                    <Rectangle Grid.Column="1" Fill="{StaticResource Ink}" />
 
-                                    <Border Grid.Column="2" Background="{StaticResource NightSidebar}">
+                                    <Border Grid.Column="2" Background="{StaticResource Aqua}">
                                         <Grid Margin="24,20,24,24">
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="32" />
@@ -558,19 +585,50 @@
                                             </Grid.RowDefinitions>
 
                                             <DockPanel>
-                                                <TextBlock Style="{StaticResource PixelTextDark}" FontSize="10" VerticalAlignment="Center" DockPanel.Dock="Left" Margin="0,0,14,0" />
-                                                <Border Background="{StaticResource NightBorder}" Height="2" VerticalAlignment="Center" />
+                                                <TextBlock
+                                                    Text="{Binding [ProfileStatsSectionLabel]}"
+                                                    Style="{StaticResource PixelText}"
+                                                    FontSize="10"
+                                                    VerticalAlignment="Center"
+                                                    DockPanel.Dock="Left"
+                                                    Margin="0,0,14,0" />
+                                                <Border
+                                                    Background="{StaticResource Ink}"
+                                                    Height="2"
+                                                    VerticalAlignment="Center" />
                                             </DockPanel>
 
                                             <StackPanel Grid.Row="1" Margin="0,14,0,0">
-                                                <TextBlock Style="{StaticResource ProfileLabel}" FontSize="9" />
-                                                <TextBlock x:Name="_gamesPlayedValueTextBlock" Style="{StaticResource PixelTextLight}" FontSize="18" Margin="0,8,0,20" x:FieldModifier="private" />
-
-                                                <TextBlock Style="{StaticResource ProfileLabel}" FontSize="9" />
-                                                <TextBlock x:Name="_winsValueTextBlock" Style="{StaticResource PixelTextLight}" FontSize="18" Margin="0,8,0,20" x:FieldModifier="private" />
-
-                                                <TextBlock Style="{StaticResource ProfileLabel}" FontSize="9" />
-                                                <TextBlock x:Name="_memberSinceValueTextBlock" Style="{StaticResource PixelTextLight}" FontSize="18" Margin="0,8,0,0" x:FieldModifier="private" />
+                                                <TextBlock
+                                                    Text="{Binding [GamesPlayedLabel]}"
+                                                    Style="{StaticResource ProfileLabel}"
+                                                    FontSize="9" />
+                                                <TextBlock
+                                                    x:Name="_gamesPlayedValueTextBlock"
+                                                    Style="{StaticResource PixelText}"
+                                                    FontSize="18"
+                                                    Margin="0,8,0,20"
+                                                    x:FieldModifier="private" />
+                                                <TextBlock
+                                                    Text="{Binding [WinsLabel]}"
+                                                    Style="{StaticResource ProfileLabel}"
+                                                    FontSize="9" />
+                                                <TextBlock
+                                                    x:Name="_winsValueTextBlock"
+                                                    Style="{StaticResource PixelText}"
+                                                    FontSize="18"
+                                                    Margin="0,8,0,20"
+                                                    x:FieldModifier="private" />
+                                                <TextBlock
+                                                    Text="{Binding [MemberSinceLabel]}"
+                                                    Style="{StaticResource ProfileLabel}"
+                                                    FontSize="9" />
+                                                <TextBlock
+                                                    x:Name="_memberSinceValueTextBlock"
+                                                    Style="{StaticResource PixelText}"
+                                                    FontSize="18"
+                                                    Margin="0,8,0,0"
+                                                    x:FieldModifier="private" />
                                             </StackPanel>
 
                                             <Grid Grid.Row="2" Height="52">
@@ -579,7 +637,6 @@
                                                     <ColumnDefinition Width="12" />
                                                     <ColumnDefinition Width="*" />
                                                 </Grid.ColumnDefinitions>
-
                                                 <Button
                                                     x:Name="_editButton"
                                                     Grid.ColumnSpan="3"
@@ -587,7 +644,6 @@
                                                     Style="{StaticResource ProfilePrimaryButton}"
                                                     Click="EditButton_Click"
                                                     x:FieldModifier="private" />
-
                                                 <Button
                                                     x:Name="_cancelButton"
                                                     Content="{Binding [CancelButtonLabel]}"
@@ -596,7 +652,6 @@
                                                     Click="CancelButton_Click"
                                                     AutomationProperties.Name="{Binding [CancelEditAccessibleName]}"
                                                     x:FieldModifier="private" />
-
                                                 <Button
                                                     x:Name="_saveButton"
                                                     Grid.Column="2"

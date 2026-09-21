@@ -22,7 +22,6 @@ namespace DominoTrain.Views
         private void LoadUserData()
         {
             _usernameTextBox.Text = "DominoMaster";
-            _biographyTextBox.Text = "Passenger on the express train to victory!";
             _gamesPlayedValueTextBlock.Text = "42";
             _winsValueTextBlock.Text = "28";
             _memberSinceValueTextBlock.Text = "Sep 2026";
@@ -59,7 +58,6 @@ namespace DominoTrain.Views
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Profile updated successfully!", "Domino Train", MessageBoxButton.OK, MessageBoxImage.Information);
 
             ExitEditingMode();
         }
