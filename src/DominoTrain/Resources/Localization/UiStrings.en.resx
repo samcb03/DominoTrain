@@ -190,7 +190,7 @@
     <value>Take a seat and register to start your game</value>
   </data>
   <data name="RegisterSectionTitle" xml:space="preserve">
-    <value>REGISTER</value>
+    <value>SIGN UP</value>
   </data>
   <data name="CredentialSectionLabel" xml:space="preserve">
     <value>01/ CREDENTIALS</value>
