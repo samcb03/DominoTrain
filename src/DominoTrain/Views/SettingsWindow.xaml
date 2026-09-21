@@ -229,7 +229,8 @@
                                         <RadioButton
                                             x:Name="_spanishLanguageOption"
                                             GroupName="Language"
-                                            IsChecked="{Binding IsSpanishSelected, Mode=TwoWay}"
+                                            IsChecked="{Binding IsSpanishSelected, Mode=OneWay}"
+                                            Click="SelectSpanishLanguage"
                                             Style="{StaticResource LanguageOption}"
                                             x:FieldModifier="private">
                                             <StackPanel Orientation="Horizontal">
@@ -263,7 +264,8 @@
                                             x:Name="_englishLanguageOption"
                                             Grid.Column="2"
                                             GroupName="Language"
-                                            IsChecked="{Binding IsEnglishSelected, Mode=TwoWay}"
+                                            IsChecked="{Binding IsEnglishSelected, Mode=OneWay}"
+                                            Click="SelectEnglishLanguage"
                                             Style="{StaticResource LanguageOption}"
                                             x:FieldModifier="private">
                                             <StackPanel Orientation="Horizontal">

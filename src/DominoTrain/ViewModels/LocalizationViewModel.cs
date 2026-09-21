@@ -7,9 +7,14 @@ namespace DominoTrain.ViewModels;
 
 public sealed class LocalizationViewModel : INotifyPropertyChanged
 {
-    private static readonly LocalizationViewModel _instance = new LocalizationViewModel();
+    private static readonly LocalizationViewModel _instance;
 
     private CultureInfo _culture;
+
+    static LocalizationViewModel()
+    {
+        _instance = new LocalizationViewModel();
+    }
 
     private LocalizationViewModel()
     {
@@ -31,7 +36,9 @@ public sealed class LocalizationViewModel : INotifyPropertyChanged
     {
         get
         {
-            return UiStrings.ResourceManager.GetString(resourceKey, _culture) ?? string.Empty;
+            string localizedText = UiStrings.ResourceManager.GetString(resourceKey, _culture) ?? string.Empty;
+
+            return localizedText;
         }
     }
 
@@ -39,14 +46,9 @@ public sealed class LocalizationViewModel : INotifyPropertyChanged
     {
         get
         {
-            return _culture.Name == SettingsDefaults.SpanishLanguageCode;
-        }
-        set
-        {
-            if (value)
-            {
-                ChangeLanguage(SettingsDefaults.SpanishLanguageCode);
-            }
+            bool isSpanishSelected = _culture.Name == SettingsDefaults.SpanishLanguageCode;
+
+            return isSpanishSelected;
         }
     }
 
@@ -54,27 +56,20 @@ public sealed class LocalizationViewModel : INotifyPropertyChanged
     {
         get
         {
-            return _culture.Name == SettingsDefaults.EnglishLanguageCode;
-        }
-        set
-        {
-            if (value)
-            {
-                ChangeLanguage(SettingsDefaults.EnglishLanguageCode);
-            }
+            bool isEnglishSelected = _culture.Name == SettingsDefaults.EnglishLanguageCode;
+
+            return isEnglishSelected;
         }
     }
 
-    private void ChangeLanguage(string languageCode)
+    public void ChangeLanguage(string languageCode)
     {
-        if (_culture.Name == languageCode)
+        if (_culture.Name != languageCode)
         {
-            return;
+            _culture = CultureInfo.GetCultureInfo(languageCode);
+            UiStrings.Culture = _culture;
+
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(string.Empty));
         }
-
-        _culture = CultureInfo.GetCultureInfo(languageCode);
-        UiStrings.Culture = _culture;
-
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(string.Empty));
     }
 }
