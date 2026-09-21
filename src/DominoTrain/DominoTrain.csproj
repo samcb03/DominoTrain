@@ -10,7 +10,10 @@
     </PropertyGroup>
     <ItemGroup>
       <None Remove="Resources\Images\avatar_generic_preview.png" />
+      <None Remove="Resources\Images\Lock.png" />
+      <None Remove="Resources\Images\MiniDominoTile.png" />
       <None Remove="Resources\Images\PixelTrain.png" />
+      <None Remove="Resources\Images\TrashCan.png" />
     </ItemGroup>
 
     <ItemGroup>
@@ -23,7 +26,10 @@
     <ItemGroup>
         <Resource Include="Assets/Fonts/PressStart2P-Regular.ttf" />
         <Resource Include="Resources\Images\avatar_generic_preview.png" />
+        <Resource Include="Resources\Images\Lock.png" />
+        <Resource Include="Resources\Images\MiniDominoTile.png" />
         <Resource Include="Resources\Images\PixelTrain.png" />
+        <Resource Include="Resources\Images\TrashCan.png" />
         <None Update="Assets/Fonts/OFL.txt" CopyToOutputDirectory="PreserveNewest" />
     </ItemGroup>
 

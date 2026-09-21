@@ -191,8 +191,7 @@
                                 Height="36"
                                 Padding="14,0"
                                 Margin="0,0,12,0"
-                                Click="OpenSettings"
-                                AutomationProperties.Name="{Binding [OpenSettingsAccessibleName]}" />
+                                Click="OpenSettings" />
                             <Border
                                 Background="{StaticResource NightInput}"
                                 BorderBrush="{StaticResource NightAccent}"
@@ -274,25 +273,7 @@
                                                 Data="M0,228 H264 V232 H0 Z M0,242 H264 V246 H0 Z M12,228 H20 V252 H12 Z M44,228 H52 V252 H44 Z M76,228 H84 V252 H76 Z M108,228 H116 V252 H108 Z M140,228 H148 V252 H140 Z M172,228 H180 V252 H172 Z M204,228 H212 V252 H204 Z M236,228 H244 V252 H236 Z" />
                                         </Canvas>
 
-                                        <StackPanel VerticalAlignment="Top" Margin="24,28,24,0">
-                                            <TextBlock
-                                                Text="{Binding [NewPassagerSubtitule]}"
-                                                Style="{StaticResource PixelTextDark}"
-                                                FontSize="9" />
-                                            <TextBlock
-                                                Text="{Binding [JoinTableTitle]}"
-                                                Style="{StaticResource PixelTextLight}"
-                                                TextWrapping="Wrap"
-                                                FontSize="16"
-                                                LineHeight="28"
-                                                Margin="0,16,0,0" />
-                                            <TextBlock
-                                                Text="{Binding [RegisterDescription]}"
-                                                Foreground="{StaticResource NightMuted}"
-                                                TextWrapping="Wrap"
-                                                FontSize="13"
-                                                Margin="0,14,0,0" />
-                                        </StackPanel>
+                                        <StackPanel VerticalAlignment="Top" Margin="24,28,24,0"/>
                                     </Grid>
                                 </Border>
 
@@ -314,19 +295,7 @@
                                             Margin="0,2,0,0" />
                                     </StackPanel>
 
-                                    <DockPanel Grid.Row="1" Margin="0,0,0,8">
-                                        <TextBlock
-                                            Text="{Binding [CredentialSectionLabel]}"
-                                            Style="{StaticResource PixelTextDark}"
-                                            FontSize="10"
-                                            VerticalAlignment="Center"
-                                            DockPanel.Dock="Left"
-                                            Margin="0,0,18,0" />
-                                        <Border
-                                            Background="{StaticResource NightBorder}"
-                                            Height="2"
-                                            VerticalAlignment="Center" />
-                                    </DockPanel>
+                                    <DockPanel Grid.Row="1" Margin="0,0,0,8"/>
 
                                     <StackPanel Grid.Row="2" Width="560" HorizontalAlignment="Left" Margin="0,6,0,0">
                                         <TextBlock
@@ -350,7 +319,6 @@
                                         <TextBox
                                             x:Name="_usernameTextBox"
                                             Style="{StaticResource NightTextBox}"
-                                            AutomationProperties.Name="{Binding [UsernameAccessibleName]}"
                                             x:FieldModifier="private" />
                                     </StackPanel>
 
@@ -363,7 +331,6 @@
                                         <PasswordBox
                                             x:Name="_passwordBox"
                                             Style="{StaticResource NightPasswordBox}"
-                                            AutomationProperties.Name="{Binding [PasswordAccessibleName]}"
                                             x:FieldModifier="private" />
                                     </StackPanel>
 
@@ -376,7 +343,6 @@
                                                 HorizontalAlignment="Left"
                                                 Width="154"
                                                 Height="50"
-                                                AutomationProperties.Name="{Binding [BackButtonAccessibleName]}"
                                                 x:FieldModifier="private" />
                                             <Button
                                                 x:Name="_registerButton"
@@ -386,7 +352,6 @@
                                                 Width="188"
                                                 Height="50"
                                                 IsDefault="True"
-                                                AutomationProperties.Name="{Binding [SignUpButtonAccesibleName]}"
                                                 x:FieldModifier="private" />
                                         </Grid>
                                         <TextBlock HorizontalAlignment="Center" Margin="0,24,0,0" Style="{StaticResource NightLabel}" FontSize="13">

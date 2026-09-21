@@ -4,7 +4,6 @@
     xmlns:viewModels="clr-namespace:DominoTrain.ViewModels"
     DataContext="{x:Static viewModels:LocalizationViewModel.Instance}"
     x:Class="DominoTrain.Views.ProfileWindow"
-    Title="{Binding [ProfileWindowTitle]}"
     Width="1220"
     Height="880"
     MinWidth="960"
@@ -34,19 +33,16 @@
             </DrawingBrush.Drawing>
         </DrawingBrush>
 
-        <!-- Dark text on the light palette -->
         <Style x:Key="ProfileLabel" TargetType="TextBlock" BasedOn="{StaticResource PixelText}">
             <Setter Property="Foreground" Value="{StaticResource Ink}" />
         </Style>
 
-        <!-- Pixel icons drawn with rectangles -->
         <Style x:Key="ProfileIconPath" TargetType="Path">
             <Setter Property="Fill" Value="{StaticResource Ink}" />
             <Setter Property="Stretch" Value="Uniform" />
             <Setter Property="RenderOptions.EdgeMode" Value="Aliased" />
         </Style>
 
-        <!-- Text inputs: editable is Frost, read-only is Mist, text is always Ink -->
         <Style x:Key="ProfileTextBox" TargetType="TextBox">
             <Setter Property="FontFamily" Value="Consolas" />
             <Setter Property="FontSize" Value="16" />
@@ -276,7 +272,6 @@
                         <RowDefinition Height="40" />
                     </Grid.RowDefinitions>
 
-                    <!-- Header -->
                     <Grid VerticalAlignment="Top" Margin="0,6,8,0">
                         <StackPanel Orientation="Horizontal">
                             <Grid Width="40" Height="46" Margin="0,0,16,0">
@@ -315,7 +310,6 @@
                         </Border>
                     </Grid>
 
-                    <!-- Card -->
                     <Grid Grid.Row="1" Margin="0,4,0,8">
                         <Border Background="{StaticResource Ink}" Margin="8,8,0,0" />
                         <Border
@@ -330,7 +324,6 @@
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
 
-                                <!-- Top band: avatar and player information -->
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="268" />
@@ -366,7 +359,6 @@
                                                 VerticalAlignment="Bottom"
                                                 Margin="0,0,-14,-12"
                                                 Click="EditButton_Click"
-                                                AutomationProperties.Name="{Binding [EditAvatarAccessibleName]}"
                                                 x:FieldModifier="private">
                                                 <Path Style="{StaticResource ProfileIconPath}" Width="20" Height="20">
                                                     <Path.Data>
@@ -408,7 +400,6 @@
                                                 Width="360"
                                                 Style="{StaticResource ProfileTextBox}"
                                                 IsReadOnly="True"
-                                                AutomationProperties.Name="{Binding [UsernameAccessibleName]}"
                                                 x:FieldModifier="private" />
 
                                             <Button
@@ -417,7 +408,6 @@
                                                 Margin="14,0,0,0"
                                                 Style="{StaticResource ProfileIconButton}"
                                                 Click="EditButton_Click"
-                                                AutomationProperties.Name="{Binding [EditUsernameAccessibleName]}"
                                                 x:FieldModifier="private">
                                                 <Path Style="{StaticResource ProfileIconPath}" Width="20" Height="20">
                                                     <Path.Data>
@@ -507,7 +497,6 @@
                                                 Grid.Column="4"
                                                 Style="{StaticResource ProfileIconButton}"
                                                 Click="CloseButton_Click"
-                                                AutomationProperties.Name="{Binding [CloseAccessibleName]}"
                                                 x:FieldModifier="private">
                                                 <Path Style="{StaticResource ProfileIconPath}" Width="16" Height="16">
                                                     <Path.Data>
@@ -525,7 +514,6 @@
 
                                         <TextBlock
                                             Grid.Row="1"
-                                            Text="{Binding [BiographyLabel]}"
                                             Style="{StaticResource ProfileLabel}"
                                             FontSize="9"
                                             Margin="0,14,0,6" />
@@ -535,14 +523,12 @@
                                             Grid.Row="2"
                                             Style="{StaticResource ProfileBiographyTextBox}"
                                             IsReadOnly="True"
-                                            AutomationProperties.Name="{Binding [BiographyAccessibleName]}"
                                             x:FieldModifier="private" />
                                     </Grid>
                                 </Grid>
 
                                 <Rectangle Grid.Row="1" Fill="{StaticResource Ink}" />
 
-                                <!-- Bottom band: avatar gallery and player data -->
                                 <Grid Grid.Row="2">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
@@ -575,7 +561,6 @@
                                             VerticalAlignment="Top"
                                             HorizontalAlignment="Left"
                                             Margin="0,10,0,0"
-                                            AutomationProperties.Name="{Binding [AvatarListAccessibleName]}"
                                             x:FieldModifier="private">
                                             <ListBox.ItemTemplate>
                                                 <DataTemplate>
@@ -658,7 +643,6 @@
                                                     Content="{Binding [EditButtonLabel]}"
                                                     Style="{StaticResource ProfilePrimaryButton}"
                                                     Click="EditButton_Click"
-                                                    AutomationProperties.Name="{Binding [EditProfileAccessibleName]}"
                                                     x:FieldModifier="private" />
                                                 <Button
                                                     x:Name="_cancelButton"
@@ -675,7 +659,6 @@
                                                     Style="{StaticResource ProfilePrimaryButton}"
                                                     Visibility="Collapsed"
                                                     Click="SaveButton_Click"
-                                                    AutomationProperties.Name="{Binding [SaveProfileAccessibleName]}"
                                                     x:FieldModifier="private" />
                                             </Grid>
                                         </Grid>
